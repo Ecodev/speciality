@@ -1,0 +1,20 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="LanguageMenu">
+		<v:page.languageMenu hideNotTranslated="1" order="0,1,2" class="list-inline" defaultLanguageLabel="English"
+		                     defaultIsoFlag="gb"/>
+
+		<v:security.allow anyBackendUser="TRUE">
+			<div class="alert alert-success">
+				The menu language above is generated in file
+				<span style=" font-size: 12px; font-family: monospace;">EXT:speciality/Resources/Private/Partials/LanguageMenu.html</span>
+				by a Fluid View Helper <strong>v:page.languageMenu</strong>. Its documentation is available on-line at <a href="http://fedext.net/viewhelpers/vhs/Page/LanguageMenuViewHelper.html">http://fedext.net/viewhelpers/vhs/Page/LanguageMenuViewHelper.html</a>
+			</div>
+		</v:security.allow>
+	</f:section>
+
+</div>

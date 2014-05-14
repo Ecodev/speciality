@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-10-17T17:55:17Z"
+	      product-name="ext-speciality">
+		<header/>
+		<body>
+
+			<!-- carousel widget -->
+			<trans-unit id="flux.carouselWidget">
+				<source>Media: carousel gallery</source>
+			</trans-unit>
+			<trans-unit id="flux.carouselWidget.description">
+				<source>Display a configurable carousel gallery where images come from the Media module.</source>
+			</trans-unit>
+			<trans-unit id="flux.carouselWidget.fields.categories">
+				<source>Categories of images (comma separated values)</source>
+			</trans-unit>
+			<trans-unit id="flux.carouselWidget.fields.width">
+				<source>Width of images</source>
+			</trans-unit>
+			<trans-unit id="flux.carouselWidget.fields.height">
+				<source>Height of images</source>
+			</trans-unit>
+			<trans-unit id="flux.carouselWidget.fields.caption">
+				<source>Display caption or not?</source>
+			</trans-unit>
+
+			<!-- 1 column template -->
+			<trans-unit id="flux.1column.fields.settings.carousel.categories">
+				<source>Carousel: categories of images displayed (comma separated values)</source>
+			</trans-unit>
+			<trans-unit id="flux.1column.fields.settings.carousel.width">
+				<source>Carousel: width of images</source>
+			</trans-unit>
+			<trans-unit id="flux.1column.fields.settings.carousel.height">
+				<source>Carousel: height of images</source>
+			</trans-unit>
+			<trans-unit id="flux.1column.fields.settings.carousel.caption">
+				<source>Carousel: display caption or not?</source>
+			</trans-unit>
+
+			<trans-unit id="lead-text">
+				<source>Acme - a company making everything</source>
+			</trans-unit>
+			<trans-unit id="lead-text-tip">
+				<source>Tip: clear the language cache in the Backend after editing a label in</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

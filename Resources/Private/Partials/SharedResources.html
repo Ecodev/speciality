@@ -1,0 +1,25 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="SharedResources">
+
+
+		<v:asset.style name="mainCss" standalone="true" rewrite="false"
+		               path="EXT:speciality/Resources/Public/Build/StyleSheets/site.min.css"/>
+
+		<v:asset.script name="mainJs" standalone="true"
+		                path="EXT:speciality/Resources/Public/Build/JavaScript/site.min.js"/>
+
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</f:section>
+
+</div>

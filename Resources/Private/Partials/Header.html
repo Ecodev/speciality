@@ -1,0 +1,34 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     xmlns:m="http://typo3.org/ns/TYPO3/CMS/Media/ViewHelpers">
+
+
+	<f:section name="Header">
+
+		<!-- Default header -->
+		<header class="jumbotron" role="banner">
+
+			<f:render section="NavigationSpecial" partial="NavigationSpecial" optional="TRUE" arguments="{_all}"/>
+
+			<f:image src="EXT:speciality/Resources/Public/Images/logo.png" alt="Logo" class="pull-left"/>
+			<h1>My company name</h1>
+
+			<p class="lead">
+				<f:translate key="lead-text" extensionName="speciality"/>
+
+				<v:security.allow anyBackendUser="TRUE">
+					<br/>
+					<small style="font-size: 65%;  padding-left: 0" class="alert alert-success">
+						<f:translate key="lead-text-tip" extensionName="speciality"/>
+						<span style=" font-size: 12px; font-family: monospace;">EXT:speciality/Resources/Private/Language/language.xlf</span>
+					</small>
+				</v:security.allow>
+			</p>
+		</header>
+
+	</f:section>
+
+</div>

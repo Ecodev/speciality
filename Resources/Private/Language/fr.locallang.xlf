@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-10-17T17:55:17Z"
+		  product-name="ext-speciality" target-language="fr">
+		<header/>
+		<body>
+			<trans-unit id="lead-text">
+				<source>Acme - a company making everything</source>
+				<target state="translated">Une compagnie faisant de tout (mais pas du n'importe quoi!)</target>
+			</trans-unit>
+			<trans-unit id="lead-text-tip">
+				<source>Tip: clear the cache in the Backend after editing a label in:</source>
+				<target state="translated">Nettoyer le cache de langue dans le Backend après édition de</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

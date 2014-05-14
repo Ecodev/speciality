@@ -1,0 +1,68 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Page"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:section name="Footer">
+
+		<footer role="contentinfo">
+
+			<!-- sitemap-->
+			<div class="row">
+				<v:page.menu entryLevel="0" levels="2" includeSpacers="FALSE" expandAll="TRUE">
+					<f:if condition="{menu}">
+
+						<f:for each="{menu}" as="menuPage" iteration="iteration">
+							<div class="col-md-2">
+								<ul class="list-unstyled">
+									<li class="{menuPage.class}">
+										<a href="{menuPage.link}" class="{menuPage.class}">
+											<h4>{menuPage.title}</h4>
+										</a>
+									</li>
+
+									<!-- Sub menu -->
+									<v:page.menu pageUid="{menuPage.uid}" includeSpacers="FALSE" expandAll="TRUE">
+										<f:if condition="{menu}">
+											<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
+												<li class="{subMenuPage.class}">
+													<a href="{subMenuPage.link}" class="{subMenuPage.class}">
+														{subMenuPage.title}
+													</a>
+												</li>
+											</f:for>
+										</f:if>
+									</v:page.menu>
+
+								</ul>
+							</div>
+						</f:for>
+					</f:if>
+				</v:page.menu>
+			</div>
+			<!-- /sitemap-->
+
+
+			<small>
+				<v:security.allow anyBackendUser="TRUE">
+					<div class="alert alert-success">
+						<p>
+							Content of the footer below is editable by an editor in the Backend in <span
+								style=" font-size: 12px; font-family: monospace;">"General Storage" > "Content
+								elements"</span>. To remove this message edit
+							file <span style=" font-size: 12px; font-family: monospace;">EXT:speciality/Resources/Private/Partials/Footer.html</span>
+						</p>
+					</div>
+				</v:security.allow>
+			</small>
+
+			<small>
+				<f:cObject typoscriptObjectPath="lib.footer"/>
+			</small>
+
+
+		</footer>
+	</f:section>
+
+</div>

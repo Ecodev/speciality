@@ -1,0 +1,221 @@
+/* Default css file for content edited with htmlArea RTE */
+
+/* Table style only applied in the BE for identifying tables */
+body.htmlarea-content-body TABLE {
+	width: 100%;
+	border-collapse: collapse;
+	border: solid 1px #8C8C8C;
+}
+
+body.htmlarea-content-body TABLE TD {
+	padding: 5px;
+	border: solid 1px #8C8C8C;
+}
+
+body.htmlarea-content-body TABLE TH {
+	padding: 5px;
+	border: solid 1px #8C8C8C;
+	background-color: #F3F3F3;
+	color: inherit;
+}
+
+/* Align buttons */
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-justify {
+	text-align: justify;
+}
+
+/* Paragraph styles */
+p sup, p sub {
+	font-size: 0.7em;
+}
+
+p.indent {
+	margin-left: 1.5em;
+}
+
+p.code {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.9em;
+	padding: 1em;
+	background: #f0f0f4;
+	border: 1px #ccd solid;
+}
+
+p.alert-warning {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #c09853;
+}
+
+p.alert-error {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	border: 1px solid #eed3d7;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	color: #b94a48;
+	background-color: #f2dede;
+}
+
+p.alert-success {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	border: 1px solid #d6e9c6;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	color: #468847;
+	background-color: #dff0d8;
+}
+
+p.alert-info {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	border: 1px solid #bce8f1;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #3a87ad;
+	background-color: #d9edf7;
+}
+
+/* Bullet styles */
+ul.component-items {
+	color: #186900;
+	list-style-type: circle;
+}
+
+ul.action-items {
+	color: #8A0020;
+}
+
+ol.component-items-ordered {
+	color: #10007B;
+	list-style-type: lower-roman;
+}
+
+ol.action-items-ordered {
+	color: #8A0020;
+	list-style-type: lower-greek;
+}
+
+/* Span styles */
+span.important {
+	color: #8A0020;
+}
+
+span.detail {
+	color: #186900;
+}
+
+span.code {
+	font-family: "Courier New", Courier, monospace;
+	padding: 0 0.3em 0 0.3em;
+	background: #f0f0f4;
+	border: 1px #ccd solid;
+}
+
+/* Color span in blue only in RTE */
+body.htmlarea-content-body span.read-more {
+	color: blue;
+}
+
+/* Blocks should be hidden by default in FE */
+.container p.read-more-content,
+.container ul.read-more-content,
+.container span.read-more-content {
+	display: none;
+}
+
+/* Backend style: put some color to highlight the difference with regular text */
+.htmlarea-content-body p.read-more-content,
+.htmlarea-content-body ul.read-more-content,
+.htmlarea-content-body span.read-more-content {
+	background-color: #F2F5A9;
+	font-style: italic;
+}
+
+/* Anchor styles */
+a.external-link {
+}
+
+a.external-link-new-window {
+}
+
+a.internal-link {
+}
+
+a.internal-link-new-window {
+}
+
+a.download {
+}
+
+a.mail {
+}
+
+/* Image styles */
+img.image-left {
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+img.image-right {
+	float: right;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+/* Table styles */
+table.tables-lines {
+	width: 100%;
+	border-bottom: 1px solid #808080;
+}
+
+table.tables-lines thead th {
+	text-align: left;
+	background-color: #FFFFFF;
+}
+
+table.tables-lines th {
+	border-top: 1px solid #808080;
+	padding: 5px;
+}
+
+table.tables-lines td {
+	border-top: 1px solid #808080;
+	padding: 5px;
+}
+
+table.tables-lines th p {
+	margin: 0px;
+}
+
+table.tables-lines td p {
+	margin: 0px;
+}
