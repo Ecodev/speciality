@@ -42,7 +42,7 @@ RTE {
 		removeTagsAndContents =
 
 		// Use CSS formatting when possible
-		useCSS = 1
+		useCSS = 0
 
 		// Processing rules
 		proc {
