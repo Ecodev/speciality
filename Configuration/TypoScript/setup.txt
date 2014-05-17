@@ -3,12 +3,15 @@
 ###################################################
 
 # TypoScript configuration coming from third-party extensions.
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:css_styled_content/static/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_basics/static/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidpages/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent/Configuration/TypoScript/setup.txt">
+# NOTICE: Un-comment me if you want to manage the Static Template here as "include"
+# with the convenience to be versionable. The opposite would be to manage the Static Template
+# in the database in a sys_template record (default).
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:css_styled_content/static/setup.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_basics/static/setup.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidpages/Configuration/TypoScript/setup.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent/Configuration/TypoScript/setup.txt">
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_core/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_bootstrap/Configuration/TypoScript/setup.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_bootstrap/Configuration/TypoScript/setup.txt">
 
 # Configuration
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Config/language.ts">
