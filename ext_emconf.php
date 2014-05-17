@@ -36,7 +36,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'flux' => '7.0.0-7.0.99',
 			'fluidpages' => '3.0.0-3.0.99',
 			'fluidcontent' => '4.0.0-4.0.99',
-			'fluidcontent_bootstrap' => '3.0.0-3.0.99',
+			'fluidcontent_bootstrap' => '',
 			'vhs' => '1.8.5',
 			'realurl' => '1.12.8',
 		),
