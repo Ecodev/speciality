@@ -15,7 +15,6 @@
 
 # Configuration
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Config/language.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Config/config.ts">
 
 # Lib
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Lib/footer.ts">
