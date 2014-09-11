@@ -67,6 +67,14 @@ with this development workflow::
 	# Install Web Components (jQuery, ...)
 	bower install
 
+	# Check whether Web Components need to be updated.
+	# The command will display the current version and the latest version available besides.
+	bower list
+
+	# If needed update Web Components versions.
+	edit bower.json
+	bower update
+
 	# Call grunt help
 	grunt help
 
