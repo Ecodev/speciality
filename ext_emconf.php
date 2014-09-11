@@ -38,7 +38,6 @@ $EM_CONF[$_EXTKEY] = array(
 			'fluidcontent' => '',
 			'fluidcontent_bootstrap' => '',
 			'vhs' => '',
-			'realurl' => '',
 		),
 		'conflicts' => array(
 		),
