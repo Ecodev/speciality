@@ -1,13 +1,13 @@
 {
-  "name": "speciality",
-  "version": "1.0.0",
-  "ignore": [],
-  "dependencies": {
-    "jquery": "1.10.2",
-    "twbs-bootstrap-sass": "3.1.1",
-    "bootstrap": "3.1.1",
-    "modernizr": "2.7.1",
-    "requirejs-bower": "https://github.com/jrburke/requirejs-bower.git",
-    "font-awesome": "~4.0.3"
-  }
+	"name": "speciality",
+	"version": "1.0.0",
+	"ignore": [],
+	"dependencies": {
+		"jquery": "2.1.*",
+		"twbs-bootstrap-sass": "3.2.*",
+		"bootstrap": "3.2.*",
+		"modernizr": "2.8.*",
+		"requirejs-bower": "https://github.com/jrburke/requirejs-bower.git",
+		"font-awesome": "4.1.*"
+	}
 }
