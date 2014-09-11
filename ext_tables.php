@@ -26,7 +26,7 @@ if (TYPO3_MODE == 'BE') {
 			'contains-' . $icon,
 			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Backend/Icons/' . $icon . '.png');
 
-		$TCA['pages']['columns']['module']['config']['items'][] = array(
+		$GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = array(
 			ucfirst($icon),
 			$icon,
 			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Backend/Icons/' . $icon . '.png'
