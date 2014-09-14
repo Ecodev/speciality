@@ -2,7 +2,7 @@ module.exports = (grunt) ->
 	grunt.initConfig
 		pkg: grunt.file.readJSON("package.json")
 		dir:
-			components: "Resources/Public/Components"
+			components: "Resources/Public/WebComponents"
 			build: "Resources/Public/Build"
 			source: "Resources/Public/Source"
 			temp: "Temporary"
@@ -169,7 +169,7 @@ module.exports = (grunt) ->
 				separator: "\n"
 			js:
 				src: [
-					"<%= dir.components %>/jquery/jquery.min.js"
+					"<%= dir.components %>/jquery/dist/jquery.min.js"
 					#"<%= dir.components %>/modernizr/modernizr.js" comment out if needed!!
 					"<%= dir.components %>/bootstrap/dist/js/bootstrap.min.js"
 					"<%= dir.ext_jquerycolorbox %>/js/jquery.colorbox-min.js"
