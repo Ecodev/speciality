@@ -4,7 +4,7 @@
 
 plugin.tx_indexedsearch {
 
-	templateFile = EXT:speciality/Resources/Private/Plugin/IndexedSearch/SearchForm.html
+	templateFile = EXT:speciality/Resources/Private/Plugins/IndexedSearch/SearchForm.html
 	_CSS_DEFAULT_STYLE >
 	_DEFAULT_PI_VARS.results = 10
 	forwardSearchWordsInResultLink = 1
