@@ -1,0 +1,34 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Page" />
+
+	<f:section name="Configuration">
+		<flux:form id="default" label="Standard Page" icon="{f:uri.resource(path: 'Backend/Icons/Page.png')}">
+			<!-- Options visible on the page property -->
+		</flux:form>
+
+		<!-- Grid displayed in the Page module -->
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column colPos="0" label="Main Content"/>
+			</flux:grid.row>
+		</flux:grid>
+	</f:section>
+
+	<f:section name="Preview">
+	</f:section>
+
+	<f:section name="Main">
+		<div class="row" role="main">
+			<div class="col-md-3 col-sm-3" role="section">
+				<f:render section="NavigationSub" partial="NavigationSub"  optional="true" arguments="{_all}" />
+			</div>
+			<div class="col-md-9 col-sm-9" role="section">
+				<v:content.render column="0"/>
+			</div>
+		</div>
+	</f:section>
+</div>

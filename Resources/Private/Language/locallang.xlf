@@ -6,6 +6,7 @@
 		<body>
 
 			<!-- carousel widget -->
+			<!-- @todo restore those labels -->
 			<trans-unit id="flux.carouselWidget">
 				<source>Media: carousel gallery</source>
 			</trans-unit>
@@ -26,16 +27,16 @@
 			</trans-unit>
 
 			<!-- 1 column template -->
-			<trans-unit id="flux.1column.fields.settings.carousel.categories">
+			<trans-unit id="field.carousel.categories">
 				<source>Carousel: categories of images displayed (comma separated values)</source>
 			</trans-unit>
-			<trans-unit id="flux.1column.fields.settings.carousel.width">
+			<trans-unit id="field.carousel.width">
 				<source>Carousel: width of images</source>
 			</trans-unit>
-			<trans-unit id="flux.1column.fields.settings.carousel.height">
+			<trans-unit id="field.carousel.height">
 				<source>Carousel: height of images</source>
 			</trans-unit>
-			<trans-unit id="flux.1column.fields.settings.carousel.caption">
+			<trans-unit id="field.carousel.caption">
 				<source>Carousel: display caption or not?</source>
 			</trans-unit>
 

@@ -1,7 +1,6 @@
-{namespace v=Tx_Vhs_ViewHelpers}
 <f:layout name="Page"/>
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 	<f:section name="Navigation">
@@ -19,7 +18,7 @@
 					</a>
 				</div>
 				<div class="navbar-collapse collapse">
-					<v:page.menu entryLevel="{v:var.typoscript(path: 'lib.menu.main.entryLevel')}">
+					<v:page.menu entryLevel="{v:variable.typoscript(path: 'lib.menu.main.entryLevel')}">
 						<ul class="nav navbar-nav">
 							<f:for each="{menu}" as="mainPage" iteration="iteration">
 								<li class="{mainPage.class}">

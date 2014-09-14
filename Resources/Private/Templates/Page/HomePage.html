@@ -1,0 +1,40 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Page" />
+
+	<f:section name="Configuration">
+		<flux:form id="front" label="Front Page" icon="{f:uri.resource(path: 'Backend/Icons/HomePage.png')}">
+
+			<!-- Options visible on the page property -->
+			<flux:field.input name="settings.carousel.categories" label="LLL:field.carousel.categories" eval="trim" default="4" />
+			<flux:field.input name="settings.carousel.width" label="LLL:field.carousel.width" eval="trim" default="1200"/>
+			<flux:field.input name="settings.carousel.height" label="LLL:field.carousel.height" eval="trim" default="340"/>
+			<flux:field.checkbox name="settings.carousel.caption" label="LLL:field.carousel.caption"  default="1"/>
+		</flux:form>
+
+		<!-- Grid displayed in the Page module -->
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column colPos="0" label="Main Content"/>
+			</flux:grid.row>
+		</flux:grid>
+	</f:section>
+
+	<f:section name="Preview">
+	</f:section>
+
+	<f:section name="Main">
+		<div class="row" role="main">
+			<div class="col-md-12" role="section">
+				<v:content.render column="0"/>
+				<f:if condition="{v:variable.typoscript(path: 'lib.addthis.display')}">
+					<f:render section="AddThis" partial="AddThis" optional="TRUE" arguments="{_all}"/>
+				</f:if>
+			</div>
+		</div>
+	</f:section>
+
+</div>

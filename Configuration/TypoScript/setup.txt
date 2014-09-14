@@ -2,16 +2,8 @@
 # Include all TypoScript files
 ###################################################
 
-# TypoScript configuration coming from third-party extensions.
-# NOTICE: Un-comment me if you want to manage the Static Template here as "include"
-# with the convenience to be versionable. The opposite would be to manage the Static Template
-# in the database in a sys_template record (default).
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:css_styled_content/static/setup.txt">
+# Possible TypoScript configuration coming from third-party extensions managed in this file.
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_basics/static/setup.txt">
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidpages/Configuration/TypoScript/setup.txt">
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent/Configuration/TypoScript/setup.txt">
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_core/Configuration/TypoScript/setup.txt">
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluidcontent_bootstrap/Configuration/TypoScript/setup.txt">
 
 # Configuration
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Config/language.ts">
@@ -25,10 +17,10 @@
 # Plugin
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_indexedsearch.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_seobasics.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Plugin/tx_vhs.ts">
 
 # Content
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Content/tt_content.ts">
 
 # Page
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Page/header.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Page/page.ts">
