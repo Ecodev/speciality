@@ -13,6 +13,3 @@ page {
 	bodyTagCObject.wrap = <body class="page-|">
     adminPanelStyles = 0
 }
-
-# remove class bodytext
-lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class >
