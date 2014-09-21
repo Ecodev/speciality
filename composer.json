@@ -3,5 +3,6 @@
 	"type": "typo3-cms-extension",
 	"description": "An extension providing a set configuration for this website. Everyone is special... isn't it?",
 	"homepage": "https://github.com/Ecodev/speciality.git",
-	"license": ["GPL-2.0+"]
+	"license": ["GPL-2.0+"],
+	"version": "1.0.0"
 }
