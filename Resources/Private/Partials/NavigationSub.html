@@ -5,60 +5,33 @@
 
 
 	<f:section name="NavigationSub">
+
 		<!-- submenu navigation, collapsible -->
-		<v:page.menu entryLevel="{v:variable.typoscript(path: 'lib.menu.sub.entryLevel')}" expandAll="false">
+		<v:page.menu as="menu" levels="2" entryLevel="{v:variable.typoscript(path: 'lib.menu.sub.entryLevel')}" showCurrent="true"
+		             classActive="active" classCurrent="current"
+		             classHasSubpages="sub">
+
 			<f:if condition="{menu}">
 				<nav role="navigation">
 					<ul class="nav navbar-list bs-docs-sidenav affix-top">
-						<f:for each="{menu}" as="menuPage" iteration="iteration">
-							<li class="{menuPage.class}">
-								<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
-								   href="{menuPage.link}" class="{menuPage.class}">
-									<i class="icon-chevron-right"></i>{menuPage.title}
+						<f:for each="{menu}" as="item" iteration="iteration">
+							<li class="{item.class}">
+								<a href="{item.link}" class="{item.class}">
+									<i class="icon-chevron-right"></i>
+									<f:if condition="{item.nav_title}">
+										<f:then>{item.nav_title}</f:then>
+										<f:else>{item.title}</f:else>
+									</f:if>
 								</a>
 								<!-- Sub menu -->
-								<v:condition.iterator.contains haystack="{rootLine}" needle="{menuPage.uid}" considerKeys="true">
-									<v:page.menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="false">
-										<f:if condition="{menu}">
-											<ul class="nav navbar-list">
-
-												<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
-													<li class="{subMenuPage.class}">
-														<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
-														   href="{subMenuPage.link}" class="{subMenuPage.class}">
-															<i class="icon-chevron-right"></i>{subMenuPage.title}
-														</a>
-														<!-- Sub-sub menu -->
-														<v:page.menu pageUid="{subMenuPage.uid}" includeSpacers="false"
-														             expandAll="false">
-															<f:if condition="{menu}">
-																<f:for each="{menu}" as="subSubMenuPage"
-																       iteration="subSubIteration">
-
-																	<ul class="nav navbar-list">
-																		<li class="{subSubMenuPage.class}">
-																			<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
-																			   href="{subSubMenuPage.link}"
-																			   class="{subSubMenuPage.class}">
-																				<i class="icon-chevron-right"></i>{subSubMenuPage.title}
-																			</a>
-																		</li>
-																	</ul>
-																</f:for>
-															</f:if>
-														</v:page.menu>
-													</li>
-												</f:for>
-											</ul>
-										</f:if>
-									</v:page.menu>
-								</v:condition.iterator.contains>
+								<v:page.menu.sub pageUid="{item.uid}"/>
 							</li>
 						</f:for>
 					</ul>
 				</nav>
 			</f:if>
 		</v:page.menu>
+
 	</f:section>
 
 </div>
