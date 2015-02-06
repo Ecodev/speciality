@@ -29,6 +29,9 @@ RTE {
 		buttons.textstyle.REInlineTags >
 		buttons.blockstyle.tags.table.allowedClasses >
 
+		# Specify the maximum width of an image, default is 300.
+		buttons.image.options.magic.maxWidth = 760
+
 		// Disable contextual menu
 		contextMenu.disabled = 1
 
@@ -137,3 +140,6 @@ RTE {
 
 // Frontend RTE configuration
 RTE.default.FE < RTE.default
+
+// For the Frontend purpose, so that image config about "maxWidth" is propagated.
+RTE.buttons.image < RTE.default.buttons.image
