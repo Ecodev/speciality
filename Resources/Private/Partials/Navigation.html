@@ -27,7 +27,12 @@
 									   data-placement="bottom"
 									   title="{mainPage.abstract}"
 									   target="{f:if(condition: '{mainPage.target}', then: '{mainPage.target}', else: '_self')}"
-									   class="{mainPage.class}">{mainPage.title}</a>
+									   class="{mainPage.class}">
+										<f:if condition="{mainPage.nav_title} != '' ">
+											<f:then>{mainPage.nav_title}</f:then>
+											<f:else>{mainPage.title}</f:else>
+										</f:if>
+									</a>
 								</li>
 							</f:for>
 						</ul>
