@@ -50,16 +50,14 @@ with this development workflow::
 	cd typo3conf/ext/speciality
 
 	# Make sure to have bower installed
+	# If bower is not installed
+	# (sudo) npm install -g bower
 	bower --version
 
-	# If bower is not installed
-	(sudo) npm install -g bower
-
 	# Make sure to have grunt installed
-	grunt --version
-
 	# If Grunt ist not installed
-	(sudo) npm install -g grunt-cli
+	# (sudo) npm install -g grunt-cli
+	grunt --version
 
 	# Install local grunt modules
 	npm install
