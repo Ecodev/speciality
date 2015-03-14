@@ -50,6 +50,9 @@ TCEMAIN.table.tt_content {
 	disableHideAtCopy = 0
 }
 
+# Hide some unused Content Element
+TCEFORM.tt_content.CType.removeItems = header, textpic, bullets, table, multimedia, media, mailform, image
+
 #########################################################
 # Re-organize tabs within the new Content Element wizard
 #########################################################
@@ -70,4 +73,4 @@ mod.wizards.newContentElement.wizardItems.forms.show >
 mod.wizards.newContentElement.wizardItems.plugins.show >
 
 # 5. Bootstrap
-mod.wizards.newContentElement.wizardItems.Bootstrap.show = FluidBT_Fluidbootstraptheme_Alert_html, FluidBT_Fluidbootstraptheme_Accordion_html, FluidBT_Fluidbootstraptheme_ImageGallery_html, FluidBT_Fluidbootstraptheme_Carousel_html
+mod.wizards.newContentElement.wizardItems.Bootstrap.show = FluidBT_Fluidbootstraptheme_Alert_html, FluidBT_Fluidbootstraptheme_Accordion_html, FluidBT_Fluidbootstraptheme_ImageGallery_html, FluidBT_Fluidbootstraptheme_Carousel_html, FluidBT_Fluidbootstraptheme_SimpleResponsiveImage_html
