@@ -2,4 +2,4 @@
 .sass-cache/*
 node_modules/*
 Temporary/*
-Resources/Public/WebComponents/*
+Resources/Public/BowerComponents/*

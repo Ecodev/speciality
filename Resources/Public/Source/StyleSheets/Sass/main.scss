@@ -2,11 +2,11 @@
 @import "variables";
 
 // the Twitter Bootstrap!
-@import "../../../WebComponents/twbs-bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../../BowerComponents/twbs-bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Variables
 // --------------------------
-@import "../../../WebComponents/font-awesome/scss/font-awesome";
+@import "../../../BowerComponents/font-awesome/scss/font-awesome";
 
 // the website
 @import "mixins";
