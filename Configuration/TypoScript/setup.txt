@@ -2,9 +2,6 @@
 # Include all TypoScript files
 ###################################################
 
-# Possible TypoScript configuration coming from third-party extensions managed in this file.
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_basics/static/setup.txt">
-
 # Configuration
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:speciality/Configuration/TypoScript/Config/language.ts">
 
