@@ -2,7 +2,7 @@ module.exports = (grunt) ->
 	grunt.initConfig
 		pkg: grunt.file.readJSON("package.json")
 		dir:
-			components: "Resources/Public/BowerComponents"
+			components: "app/bower_components"
 			build: "Resources/Public/Build"
 			source: "Resources/Public/Source"
 			temp: "Temporary"
