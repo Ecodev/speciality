@@ -102,4 +102,10 @@ config {
 
 	#
 	#headerComment = Integration and development - http://example.com/
+
+	# Configure  site title
+	# Notice this configuration will be overridden
+	# by EXT:seo_basics if enabled and its static TS file loaded.
+	pageTitleSeparator = -
+	pageTitleSeparator.noTrimWrap = | | |
 }

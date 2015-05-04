@@ -3,7 +3,7 @@
 ################
 
 # Notice:
-# page object is instantiated from EXT:fluidpages/Configuration/TypoScript/setup.txt
+# page object is instantiated in EXT:fluidpages/Configuration/TypoScript/setup.txt
 
 page {
 	# enhanced body with class="page-x"
@@ -11,5 +11,6 @@ page {
 	bodyTagCObject = TEXT
 	bodyTagCObject.field = uid
 	bodyTagCObject.wrap = <body class="page-|">
-    adminPanelStyles = 0
+	adminPanelStyles = 0
+	meta.viewport  = width=device-width, initial-scale=1
 }
