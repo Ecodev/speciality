@@ -1,7 +1,7 @@
 {
 	"name": "ecodev/speciality",
 	"type": "typo3-cms-extension",
-	"description": "An extension providing a set configuration for this website. Everyone is special... isn't it?",
+	"description": "Based extension providing a set of configuration and templates for your website. Everyone is special...",
 	"homepage": "https://github.com/Ecodev/speciality.git",
 	"license": ["GPL-2.0+"],
 	"version": "1.2.0-dev"

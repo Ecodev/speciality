@@ -11,8 +11,8 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Collection of configuration / templates for this website.',
-	'description' => 'An extension providing a set configuration for this website. Everyone is special... isn\'t it?',
+	'title' => 'Set of page and content templates',
+	'description' => 'Based extension providing a set of configuration and templates for your website. Everyone is special...',
 	'author' => 'Fabien Udriot',
 	'author_email' => 'support@ecodev.ch',
 	'category' => 'misc',
