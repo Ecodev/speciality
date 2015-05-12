@@ -6,14 +6,14 @@
 /**
  * Prevent new realurl updates from clearing cache
  */
-unset($TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['clearAllCache_additionalTables']['tx_realurl_pathcache']);
+unset($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['clearAllCache_additionalTables']['tx_realurl_pathcache']);
 
 /**
  * Realurl naming precedence configuration
  */
-$TYPO3_CONF_VARS['FE']['addRootLineFields'] .= ',tx_realurl_pathsegment,alias,title';
-$TYPO3_CONF_VARS['EXTCONF']['realurl'] = array();
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
+$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',tx_realurl_pathsegment,alias,title';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array();
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['_DEFAULT'] = array(
 	'init' => array(
 		'enableCHashCache' => true,
 		'appendMissingSlash' => 'ifNotFile',
@@ -291,15 +291,15 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
 /**
  * Edit rootpage_id to your website's root page UID
  */
-$TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT']['pagePath']['rootpage_id'] = 1;
-#$TYPO3_CONF_VARS['EXTCONF']['realurl']['newsletter.domain.tld'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
-#$TYPO3_CONF_VARS['EXTCONF']['realurl']['newsletter.domain.tld']['pagePath']['rootpage_id'] = 4;
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['_DEFAULT']['pagePath']['rootpage_id'] = 1;
+#$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['newsletter.domain.tld'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['_DEFAULT'];
+#$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['newsletter.domain.tld']['pagePath']['rootpage_id'] = 4;
 
 /**
  * Edit for multiple languages
  */
 if (false) {
-	$TYPO3_CONF_VARS['EXTCONF']['realurl']['_DOMAINS'] = array(
+	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['_DOMAINS'] = array(
 		'encode' => array(
 			// English
 			array(
