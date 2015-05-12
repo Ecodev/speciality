@@ -191,6 +191,10 @@ img.image-right {
 	padding-bottom: 10px;
 }
 
+img.img-responsive {
+
+}
+
 /* Table styles */
 table.tables-lines {
 	width: 100%;
