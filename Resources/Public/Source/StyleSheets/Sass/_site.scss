@@ -97,7 +97,7 @@ label {
   background-color: #f5f5f5;
 }
 
-/* style for sub-submenu */
+/* style for menu level 2 */
 .nav.bs-docs-sidenav > .active .nav a {
   padding-left: 15%;
 }
@@ -105,6 +105,12 @@ label {
 .nav.bs-docs-sidenav > .active .nav a.active {
   padding-left: 15%;
   border-top: 1px solid #FFF;
+}
+
+/* style for menu level 3 */
+.nav.bs-docs-sidenav .nav.bs-docs-sidenav .nav.bs-docs-sidenav > li a,
+.nav.bs-docs-sidenav .nav.bs-docs-sidenav .nav.bs-docs-sidenav > li.active a {
+  padding-left: 25%;
 }
 
 /* Responsive
