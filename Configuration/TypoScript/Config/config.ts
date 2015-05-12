@@ -102,4 +102,8 @@ config {
 
 	#
 	#headerComment = Integration and development - http://example.com/
+	
+	# Config site title
+	pageTitleSeparator = -
+	pageTitleSeparator.noTrimWrap = | | |
 }
