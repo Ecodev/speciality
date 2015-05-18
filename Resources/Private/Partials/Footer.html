@@ -9,7 +9,7 @@
 
 			<!-- sitemap-->
 			<div class="row">
-				<v:page.menu entryLevel="0" levels="2" includeSpacers="FALSE" expandAll="TRUE">
+				<v:page.menu entryLevel="0" levels="2" includeSpacers="false" expandAll="true">
 					<f:if condition="{menu}">
 
 						<f:for each="{menu}" as="menuPage" iteration="iteration">
@@ -22,7 +22,7 @@
 									</li>
 
 									<!-- Sub menu -->
-									<v:page.menu pageUid="{menuPage.uid}" includeSpacers="FALSE" expandAll="TRUE">
+									<v:page.menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="true">
 										<f:if condition="{menu}">
 											<f:for each="{menu}" as="subMenuPage" iteration="subIteration">
 												<li class="{subMenuPage.class}">
@@ -44,7 +44,7 @@
 
 
 			<small>
-				<v:security.allow anyBackendUser="TRUE">
+				<v:security.allow anyBackendUser="true">
 					<div class="alert alert-success">
 						<p>
 							Content of the footer below is editable by an editor in the Backend in <span
