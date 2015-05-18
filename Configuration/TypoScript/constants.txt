@@ -31,3 +31,6 @@ config {
 		language = de
 	}
 [end]
+
+# Enable login box
+styles.content.loginform.templateFile = EXT:felogin/template.html
