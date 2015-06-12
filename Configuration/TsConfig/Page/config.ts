@@ -51,7 +51,7 @@ TCEMAIN.table.tt_content {
 }
 
 # Hide some unused Content Element
-TCEFORM.tt_content.CType.removeItems = header, textpic, bullets, table, multimedia, media, mailform, image
+TCEFORM.tt_content.CType.removeItems = header, textpic, bullets, table, multimedia, media, mailform
 
 #########################################################
 # Re-organize tabs within the new Content Element wizard
@@ -61,7 +61,7 @@ TCEFORM.tt_content.CType.removeItems = header, textpic, bullets, table, multimed
 mod.wizards.newContentElement.renderMode = NoTabs
 
 # 1. common
-mod.wizards.newContentElement.wizardItems.common.show = text
+mod.wizards.newContentElement.wizardItems.common.show = text, image
 
 # 2. special
 mod.wizards.newContentElement.wizardItems.special.show >
