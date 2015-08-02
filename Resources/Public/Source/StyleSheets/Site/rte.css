@@ -196,30 +196,20 @@ img.img-responsive {
 }
 
 /* Table styles */
-table.tables-lines {
-	width: 100%;
-	border-bottom: 1px solid #808080;
+table.table {
 }
 
-table.tables-lines thead th {
-	text-align: left;
-	background-color: #FFFFFF;
+table.table-striped {
 }
 
-table.tables-lines th {
-	border-top: 1px solid #808080;
-	padding: 5px;
+table.table-bordered {
 }
 
-table.tables-lines td {
-	border-top: 1px solid #808080;
-	padding: 5px;
+table.table-hover {
 }
 
-table.tables-lines th p {
-	margin: 0px;
+table.table-condensed {
 }
 
-table.tables-lines td p {
-	margin: 0px;
+table.table-responsive {
 }

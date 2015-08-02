@@ -5,7 +5,39 @@
  */
 RTE {
 
-	// Default RTE configuration (all tables)
+	// Explicit class names
+	classes {
+
+		table {
+			name = Base
+		}
+
+		table-striped {
+			name = Striped rows
+		}
+
+		table-bordered {
+			name = Bordered table
+		}
+
+		table-hover {
+			name = Hover rows
+		}
+
+		table-condensed {
+			name = Condensed table
+		}
+
+		table-responsive {
+			name = Responsive table
+		}
+
+		code {
+			name = Code
+		}
+	}
+
+	// Default RTE configuration.
 	default {
 
 		// Default target for links
@@ -25,9 +57,9 @@ RTE {
 
 		// Make possible to read classes from the rte.css file
 		buttons.textstyle.tags.span.allowedClasses >
-		buttons.textstyle.tags.REInlineTags >
-		buttons.textstyle.REInlineTags >
+		buttons.textstyle.tags.span.allowedClasses = detail, important, code
 		buttons.blockstyle.tags.table.allowedClasses >
+		buttons.blockstyle.tags.table.allowedClasses = table, table-striped, table-bordered, table-hover, table-condensed, table-responsive
 
 		# Specify the maximum width of an image, default is 300.
 		buttons.image.options.magic.maxWidth = 760
@@ -50,8 +82,8 @@ RTE {
 		// Processing rules
 		proc {
 
-			// Allowed Classes to be saved
-			allowedClasses  < RTE.default.classesCharacter
+			// Allowed * classes to be saved
+			allowedClasses := addToList(table, table-striped, table-bordered, table-hover, table-condensed, table-responsive, code)
 
 			// Transformation method
 			overruleMode = ts_css
@@ -62,17 +94,11 @@ RTE {
 			// Map paragraph tag
 			remapParagraphTag = p
 
-			// Tags allowed
-			allowTags = a, abbr, acronym, address, blockquote, b, br, caption, center, cite, code, div, em, font, h1, h2, h3, h4, h5, h6, hr, i, img, li, link, ol, p, pre, q, sdfield, span, strike, strong, sub, sup, table, thead, tbody, tfoot, td, th, tr, tt, u, ul
-
 			// Tags denied
 			denyTags >
 
 			// Attributes to keep for P & DIV
 			keepPDIVattribs = xml:lang,class,style,align
-
-			// Tags allowed outside P & DIV
-			allowTagsOutside = img,hr,table,tr,th,td,h1,h2,h3,h4,h5,h6,br,ul,ol,li,pre,address,span
 
 			// Tags allowed in Typolists
 			allowTagsInTypolists = br,font,b,i,u,a,img,span
@@ -139,6 +165,7 @@ RTE {
 }
 
 // Frontend RTE configuration
+RTE.default.FE >
 RTE.default.FE < RTE.default
 
 // For the Frontend purpose, so that image config about "maxWidth" is propagated.
