@@ -107,7 +107,6 @@ module.exports = (grunt) ->
 			build: # Target
 				options: # Target options
 				# output_style = expanded or nested or compact or compressed
-					sourcemap: "none"
 					style: "expanded"
 
 				files:
