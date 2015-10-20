@@ -139,6 +139,9 @@ span.code {
 	border: 1px #ccd solid;
 }
 
+span.read-more {
+}
+
 /* Color span in blue only in RTE */
 body.htmlarea-content-body span.read-more {
 	color: blue;

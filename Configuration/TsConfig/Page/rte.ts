@@ -57,7 +57,7 @@ RTE {
 
 		// Make possible to read classes from the rte.css file
 		buttons.textstyle.tags.span.allowedClasses >
-		buttons.textstyle.tags.span.allowedClasses = detail, important, code
+		buttons.textstyle.tags.span.allowedClasses = detail, important, code, read-more
 		buttons.blockstyle.tags.table.allowedClasses >
 		buttons.blockstyle.tags.table.allowedClasses = table, table-striped, table-bordered, table-hover, table-condensed, table-responsive
 
