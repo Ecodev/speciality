@@ -35,6 +35,10 @@ RTE {
 		code {
 			name = Code
 		}
+
+		read-more {
+			name = Read more
+		}
 	}
 
 	// Default RTE configuration.
@@ -83,7 +87,7 @@ RTE {
 		proc {
 
 			// Allowed * classes to be saved
-			allowedClasses := addToList(table, table-striped, table-bordered, table-hover, table-condensed, table-responsive, code)
+			allowedClasses := addToList(table, table-striped, table-bordered, table-hover, table-condensed, table-responsive, code, read-more)
 
 			// Transformation method
 			overruleMode = ts_css
