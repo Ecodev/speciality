@@ -8,21 +8,10 @@ if (!defined('TYPO3_MODE')) {
 # Add user TSConfig
 $basePath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('speciality');
 
-// User TS configuration for the "admin panel".
-$adminPanelTs = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($basePath . 'Configuration/UserTS/admPanel.ts');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig($adminPanelTs);
-
-// User TS configuration for "modules".
-$moduleTs = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($basePath . 'Configuration/UserTS/mod.ts');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig($moduleTs);
-
-// User TS configuration for "options".
-$optionsTs = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($basePath . 'Configuration/UserTS/options.ts');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig($optionsTs);
-
-// User TS configuration for "setup".
-$setupTs = \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($basePath . 'Configuration/UserTS/setup.ts');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig($setupTs);
+// Default User TSConfig to be added in any case.
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
+    <INCLUDE_TYPOSCRIPT: source="DIR:EXT:speciality/Configuration/UserTS" extensions="ts">
+');
 
 // New icons for the BE
 if (TYPO3_MODE == 'BE') {
