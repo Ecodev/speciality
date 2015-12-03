@@ -1,7 +1,5 @@
 /**
  * Rich Text Editor Setup
- *
- * @author Fabien Udriot <fabien.udriot@ecodev.ch>
  */
 RTE {
 
