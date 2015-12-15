@@ -26,6 +26,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'fluidpages' => '',
 			'fluidcontent' => '',
 			'fluidcontent_core' => '',
+			'fluidbootstraptheme' => '',
 			'vhs' => '',
 		),
 		'conflicts' => array(
