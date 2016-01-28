@@ -33,4 +33,4 @@ config {
 [end]
 
 # Enable login box
-styles.content.loginform.templateFile = EXT:felogin/template.html
+styles.content.loginform.templateFile = EXT:felogin/Resources/Private/Templates/FrontendLogin.html
