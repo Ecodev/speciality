@@ -42,6 +42,31 @@ RTE {
 	// Default RTE configuration.
 	default {
 
+		## MS Word cleaning
+		enableWordClean = 1
+
+		## Remove HTML comments
+		removeComments = 1
+
+		## Remove HTML tags
+		removeTags = center, font, o:p, sdfield, strike, u
+
+		## Remove HTML tags and their content
+		removeTagsAndContents = link, meta, script, title
+
+		## Remove trailing BR if any
+		removeTrailingBR = 1
+
+		## Tags allowed outside <p> and <div> tags
+		allowTagsOutside (
+			address, br, dd, dl, dt, h1, h2, h3, h4, h5, hr, img, li, ol,
+			pre, table, tr, th, td, ul
+		)
+
+		# For clean copy / paste
+		buttons.pastetoggle.setActiveOnRteOpen = 1
+		buttons.pastetoggle.hidden = 1
+
 		// Default target for links
 		defaultLinkTarget = _top
 
@@ -49,7 +74,7 @@ RTE {
 		showButtons = *
 
 		// Toolbar order
-		toolbarOrder = formatblock, blockstyle, textstyle, linebreak, bold, italic, underline, strikethrough, bar, textcolor, bgcolor, bar, orderedlist, unorderedlist, bar, left, center, right, justifyfull, linebreak, copy, cut, paste, bar, undo, redo, bar, findreplace, removeformat, bar, link, unlink, linkcreator, bar, imageeditor, bar, table, bar, line, bar, insertparagraphbefore, insertparagraphafter, bar, chMode, showhelp, about, linebreak, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
+		toolbarOrder = formatblock, blockstyle, textstyle, linebreak, bold, italic, underline, strikethrough, bar, textcolor, bgcolor, bar, orderedlist, unorderedlist, bar, left, center, right, justifyfull, linebreak, copy, cut, paste, bar, undo, redo, bar, findreplace, pastetoggle, removeformat, bar, link, unlink, linkcreator, bar, imageeditor, bar, table, bar, line, bar, insertparagraphbefore, insertparagraphafter, bar, chMode, showhelp, about, linebreak, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
 
 		RTEHeightOverride = 700
 		RTEWidthOverride = 700
@@ -150,7 +175,7 @@ RTE {
 
 			// Exit HTML parser
 			exitHTMLparser_db = 1
-				exitHTMLparser_db {
+			exitHTMLparser_db {
 
 				// Remap bold and italic
 				tags.b.remap = strong
