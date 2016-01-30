@@ -12,4 +12,4 @@ TCEFORM.tt_content.layout.altLabels {
 }
 
 # Hide some unused Content Element
-TCEFORM.tt_content.CType.removeItems = header, textpic, bullets, table, multimedia, media, mailform
+TCEFORM.tt_content.CType.removeItems = header, textpic, textmedia, bullets, table, multimedia, media, mailform
