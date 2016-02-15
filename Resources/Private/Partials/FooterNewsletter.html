@@ -1,0 +1,23 @@
+<f:layout name="Page"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+	<f:section name="FooterNewsletter">
+		<div class="newsletter-helper">
+			<hr/>
+			<p>
+				If the email does not display correctly
+				<f:link.page>click here</f:link.page>.
+			</p>
+			<p>
+				Add the email address "info@example.com " in your email address book to ensure the newsletter to
+				correctly comes in your mail box and displays images.
+			</p>
+			<p>
+				If you no longer wish to receive the newsletter or if your email address has changed, please
+				<a href="{f:uri.page(pageUid: '350', additionalParams: '{token: \'\'}', noCacheHash: 'true', absolute: 1)}###token###">click
+					here</a>.
+			</p>
+		</div>
+	</f:section>
+</div>

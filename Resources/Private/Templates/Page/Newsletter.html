@@ -3,10 +3,10 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-	<f:layout name="Newsletter" />
+	<f:layout name="Newsletter"/>
 
 	<f:section name="Configuration">
-		<flux:form id="default" label="Newsletter" icon="{f:uri.resource(path: 'Backend/Icons/Page.png')}"><!-- @todo add Newsletter thumbnail -->
+		<flux:form id="default" label="Newsletter" icon="{f:uri.resource(path: 'Backend/Icons/Page.png')}">
 			<!-- Options visible on the page property -->
 		</flux:form>
 
@@ -22,6 +22,10 @@
 	</f:section>
 
 	<f:section name="Main">
+		<div class="newsletter-helper">
+			If the email does not display correctly
+			<f:link.page>click here</f:link.page>.
+		</div>
 		<div class="row" role="main">
 			<div class="col-md-12" role="section">
 				<v:content.render column="0"/>
