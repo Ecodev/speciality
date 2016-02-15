@@ -4,20 +4,5 @@
 	"description": "Based extension providing a set of configuration and templates for your website. Everyone is special...",
 	"homepage": "https://github.com/Ecodev/speciality.git",
 	"license": ["GPL-2.0+"],
-	"require": {
-		"fluidtypo3/fluidcontent": "4.*.*",
-		"fluidtypo3/fluidpages": "3.*.*",
-		"fluidtypo3/fluidcontent_core": "1.*.*",
-		"fluidtypo3/flux": "7.*.*",
-		"fluidtypo3/vhs": "2.*.*",
-
-		"typo3-ter/nc-staticfilecache": "*",
-		"typo3-ter/realurl": "*",
-		"typo3-ter/seo-basics": "*",
-
-		"helhum/typo3-console": "1.*.*",
-		"fab/vidi": "2.*.*",
-		"fab/media": "4.*.*"
-	},
 	"version": "1.2.0-dev"
 }
