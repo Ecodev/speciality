@@ -6,8 +6,8 @@
 		"jquery": "2.1.*",
 		"twbs-bootstrap-sass": "3.3.*",
 		"bootstrap": "3.3.*",
-		"modernizr": "2.8.*",
+		"modernizr": "3.3.*",
 		"requirejs-bower": "https://github.com/jrburke/requirejs-bower.git",
-		"font-awesome": "4.3.*"
+		"font-awesome": "4.5.*"
 	}
 }

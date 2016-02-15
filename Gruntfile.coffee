@@ -3,7 +3,7 @@ module.exports = (grunt) ->
 		pkg: grunt.file.readJSON("package.json")
 		dir:
 			components: "Resources/Public/BowerComponents"
-			build: "Resources/Public/Build"
+			build: "Resources/Public"
 			source: "Resources/Public/Source"
 			temp: "Temporary"
 

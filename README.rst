@@ -35,11 +35,11 @@ Notice also the new file structure of the `Public`_ directory::
 
 	ls -l Resources/Public
 
-	├── Build (1)
-	├── Source (2)
-	├── BowerComponents (3)
+	├── / (1)
+	├── /Source (2)
+	├── /BowerComponents (3)
 
-1. Build: the generated output optimized for production. Never edit files as they will be overridden.
+1. the generated output optimized for production. Never edit files as they will be overridden.
 2. Source: everything that we produce as code that includes the raw Sass, JavaScript, images comes here.
 3. Components: Web Components managed by Bower. The directory is not under Git though, since it is replicable.
 
