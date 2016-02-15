@@ -27,6 +27,6 @@ mod.SHARED {
   mod.wizards.newContentElement.wizardItems.plugins.show >
 
   # 5. Bootstrap
-  mod.wizards.newContentElement.wizardItems.Bootstrap.show = FluidBT_Fluidbootstraptheme_Alert_html, FluidBT_Fluidbootstraptheme_Accordion_html, FluidBT_Fluidbootstraptheme_ImageGallery_html, FluidBT_Fluidbootstraptheme_Carousel_html, FluidBT_Fluidbootstraptheme_SimpleResponsiveImage_html
+  mod.wizards.newContentElement.wizardItems.Bootstrap.show = speciality_Alert_html, speciality_Accordion_html, speciality_ImageGallery_html, speciality_Carousel_html, speciality_SimpleResponsiveImage_html
 
 [global]

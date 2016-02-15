@@ -3,6 +3,10 @@ Speciality
 
 Collection of configuration / templates for this website.
 
+Fluid Content element
+=====================
+
+Credits: the Fluid content element where taken from the [Fluid Bootstrap theme](https://github.com/bootstraptheme-for-typo3/fluidbootstraptheme). The reason for that is we needed support for TYPO3 7 and the extension currently looks to be in an hibernation state.
 
 Frontend Development Workflow
 =============================

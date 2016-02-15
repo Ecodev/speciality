@@ -1,0 +1,45 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="progressBar" options="{group: 'Bootstrap', Fluidcontent: {sorting: 650}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/ProgressBar.png\')}'}">
+			<flux:form.sheet name="progressBar">
+				<flux:field.checkbox name="settings.progressBarAnimated" default="0" />
+				<flux:field.checkbox name="settings.progressBarStriped" default="0" />
+				<flux:field.select name="settings.progressBarColor"
+								   items="progress-bar-success,progress-bar-info,progress-bar-warning,progress-bar-danger"
+								   default="progress-bar-success" />
+				<flux:field.input name="settings.progressBarProgress" eval="int,trim" minimum="0" maximum="100" default="50">
+					<flux:wizard.slider hideParent="TRUE" step="1" width="100" />
+				</flux:field.input>
+				<flux:field.checkbox name="settings.progressBarShowText" default="0" />
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<div style="border: solid 1px #000000; overflow: auto;">
+			<div style="float: left; width:{settings.progressBarProgress}%; background-color:#999999; height: 20px; overflow: hidden; text-align: center;">
+				{settings.progressBarProgress}%
+			</div>
+		</div>
+	</f:section>
+	<f:section name="Main">
+		<div class="progress {f:if(condition: settings.progressBarStriped, then: 'progress-striped')} {f:if(condition: settings.progressBarAnimated, then: 'active')} ">
+			<div class="progress-bar {settings.progressBarColor}" role="progressbar"
+				 aria-valuenow="{settings.progressBarProgress}" aria-valuemin="0" aria-valuemax="100"
+				 style="width:{settings.progressBarProgress}%;">
+				<f:if condition="{settings.progressBarShowText}">
+					<f:then>
+						{settings.progressBarProgress}%
+					</f:then>
+				</f:if>
+			</div>
+		</div>
+	</f:section>
+
+</div>

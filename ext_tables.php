@@ -34,5 +34,4 @@ if (TYPO3_MODE == 'BE') {
 
 # Use Flux Core API for registering extension provider.
 \FluidTYPO3\Flux\Core::registerProviderExtensionKey('speciality', 'Page');
-# Nothing to register yet. TODO: restore me!
-#\FluidTYPO3\Flux\Core::registerProviderExtensionKey('speciality', 'Content');
+\FluidTYPO3\Flux\Core::registerProviderExtensionKey('speciality', 'Content');
