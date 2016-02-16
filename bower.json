@@ -2,7 +2,7 @@
 	"name": "speciality",
 	"version": "1.0.0",
 	"ignore": [],
-	"dependencies": {
+	"devDependencies": {
 		"jquery": "2.1.*",
 		"twbs-bootstrap-sass": "3.3.*",
 		"bootstrap": "3.3.*",
