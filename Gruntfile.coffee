@@ -2,9 +2,9 @@ module.exports = (grunt) ->
 	grunt.initConfig
 		pkg: grunt.file.readJSON("package.json")
 		dir:
-			components: "Resources/Public/BowerComponents"
+			components: "Resources/Private/BowerComponents"
 			build: "Resources/Public"
-			source: "Resources/Public/Source"
+			source: "Resources/Private/Assets"
 			temp: "Temporary"
 
 	# JavaScript files

@@ -98,7 +98,7 @@ RTE {
 		showStatusBar = 1
 
 		// RTE stylesheet
-		contentCSS = EXT:speciality/Resources/Public/Source/StyleSheets/rte.css
+		contentCSS = EXT:speciality/Resources/Private/Assets/StyleSheets/rte.css
 
 		// Remove HTML tags and their content
 		removeTagsAndContents =
