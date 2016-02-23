@@ -17,34 +17,39 @@ Before further reading, also consider a few words to give a bit of background:
 **We develop locally and use Git and Composer as main deployment tools**. It serves our projects well. Our extensions are controlled by Composer
 and thanks to the recent progress in this area every extension is now available in the form of a Composer Package at [composer.typo3.org](http://composer.typo3.org/).
 
-Recently, I have experimenting some workflow based on `Phing`_, `Grunt`_ and `Bower`_. I found it nice:
+Recently, I have experimenting some workflow based on [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/). I found it nice:
 
-- `Grunt`_: describes itself as the "JavaScript Task Runner". It is basically an automation tool enabling to quickly build advanced workflow
+- [Grunt](http://gruntjs.com/): describes itself as the "JavaScript Task Runner". It is basically an automation tool enabling to quickly build advanced workflow
   Coming alongside with a rich ecosystem for all sort of needs.
   One of the handy feature, is the "watch" functionality which observes any changes made on the file system and triggers
   a build. This make the delivery process quite efficient and transparent. Additionally, the building process
   includes all sort of optimisation for the web such as minifying, compressing files.
-  Also images get optimized by third party libraries done by the `Grunt Imagine`_ tasks
+  Also images get optimized by third party libraries done by the [Grunt Imagine](https://github.com/asciidisco/grunt-imagine) tasks
 
-- `Bower`_: Package Manager for the web where package can be Web Components such a jQuery, Twitter Bootstrap, ...
+- [Bower](http://bower.io/): Package Manager for the web where package can be Web Components such a jQuery, Twitter Bootstrap, ...
   It makes pretty straightforward to cope with versions and dependencies of these Web Components.
   For instance, starting a new project, you certainly want to have your libraries up to date.
   Bower will scan and let you know which library must be upgraded. Awesome!
 
-Notice also the new file structure of the `Public`_ directory::
+Notice also the new file structure of the [Public](https://github.com/Ecodev/bootstrap_package/tree/master/htdocs/typo3conf/ext/speciality/Resources/Public) directory:
+
+```
 
 	ls -l Resources/Public
 
 	├── / (1)
 	├── /Source (2)
 	├── /BowerComponents (3)
+```
 
 1. the generated output optimized for production. Never edit files as they will be overridden.
 2. Source: everything that we produce as code that includes the raw Sass, JavaScript, images comes here.
 3. Components: Web Components managed by Bower. The directory is not under Git though, since it is replicable.
 
 Alright, time for getting hands dirty! Assuming, you have installed the Bootstrap Package, find some instructions how to get started
-with this development workflow::
+with this development workflow:
+
+```
 
 	# Head to EXT:speciality
 	cd typo3conf/ext/speciality
@@ -81,10 +86,4 @@ with this development workflow::
 
 	# Watch your asset and compile them as you edit them.
 	grunt watch
-
-.. _Phing: https://www.phing.info/
-.. _Grunt: http://gruntjs.com/
-.. _Bower: http://bower.io/
-.. _SVN archive: https://github.com/TYPO3-svn-archive/
-.. _Public: https://github.com/Ecodev/bootstrap_package/tree/master/htdocs/typo3conf/ext/speciality/Resources/Public
-.. _Grunt Imagine: https://github.com/asciidisco/grunt-imagine
+```
