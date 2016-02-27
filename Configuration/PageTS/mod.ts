@@ -30,3 +30,8 @@ mod.SHARED {
   mod.wizards.newContentElement.wizardItems.Bootstrap.show = speciality_Alert_html, speciality_Accordion_html, speciality_ImageGallery_html, speciality_Carousel_html, speciality_SimpleResponsiveImage_html
 
 [global]
+
+# Disable "QuickEdit" menu in module "page".
+mod.web_layout.menu.function {
+  0 = 0
+}
