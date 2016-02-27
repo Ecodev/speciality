@@ -25,7 +25,7 @@ class ext_update
      */
     public function access()
     {
-        return true;
+        return false;
     }
 
     /**
