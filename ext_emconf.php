@@ -1,16 +1,5 @@
 <?php
-
-/***************************************************************
- * Extension Manager/Repository config file for ext "speciality".
- *
- * Auto generated 10-01-2013 17:54
- *
- * Manual updates:
- * Only the data in the array - everything else is removed by next
- * writing. "version" and "dependencies" must not be touched!
- ***************************************************************/
-
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
 	'title' => 'Set of page and content templates',
 	'description' => 'Based extension providing a set of configuration and templates for your website. Everyone is special...',
 	'author' => 'Fabien Udriot',
@@ -19,20 +8,20 @@ $EM_CONF[$_EXTKEY] = array(
 	'author_company' => 'Ecodev',
 	'state' => 'stable',
 	'version' => '1.2.0-dev',
-	'constraints' => array(
-		'depends' => array(
+	'constraints' => [
+		'depends' => [
 			'typo3' => '7.6.0-7.99.99',
 			'flux' => '',
 			'fluidpages' => '',
 			'fluidcontent' => '',
 			'fluidcontent_core' => '',
 			'vhs' => '',
-		),
-		'conflicts' => array(
-		),
-		'suggests' => array(
-		),
-	),
-	'suggests' => array(
-	),
-);
+		],
+		'conflicts' => [
+		],
+		'suggests' => [
+		],
+	],
+	'suggests' => [
+	],
+];
