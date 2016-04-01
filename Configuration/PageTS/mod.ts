@@ -3,10 +3,9 @@
 ######################
 
 mod.SHARED {
-  defaultLanguageFlag = gb.gif
+  defaultLanguageFlag = gb
   defaultLanguageLabel = English
 }
-
 
 # Re-organize tabs within the new Content Element wizard only for regular user.
 [adminUser = 0]
