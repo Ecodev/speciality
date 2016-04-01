@@ -1021,6 +1021,42 @@
 			</trans-unit>
 			<!-- /ThumbnailBox.html -->
 
+			<!-- TextImage.html -->
+			<trans-unit id="flux.TextImage" xml:space="preserve">
+                <source>Text and image</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.description" xml:space="preserve">
+                <source>Text and image in columns</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.columns.content" xml:space="preserve">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.fields.settings.responsiveViewImage" xml:space="preserve">
+                <source>Image responsive visibility</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.fields.settings.responsiveViewText" xml:space="preserve">
+                <source>Text responsive visibility</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.fields.settings.image" xml:space="preserve">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.fields.settings.imageTitle" xml:space="preserve">
+                <source>Image title</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.fields.settings.maxWidth" xml:space="preserve">
+                <source>Max image width</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.fields.settings.imageAlign" xml:space="preserve">
+                <source>Image position</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.fields.settings.link" xml:space="preserve">
+                <source>Link of content</source>
+            </trans-unit>
+            <trans-unit id="flux.TextImage.fields.settings.more" xml:space="preserve">
+                <source>"See more" button label</source>
+            </trans-unit>
+			<!-- /TextImage.html -->
+
 			<!-- /Content -->
 
 			<!-- carousel widget -->

@@ -1,0 +1,42 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="TextImage" options="{group: 'Bootstrap',Fluidcontent: {sorting: 50}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/SimpleResponsiveImage.png\')}'}">
+			<flux:field.file name="settings.image" showThumbnails="1" allowed="jpg,jpeg,png,gif,JPEG,GIF,PNG,JPG" required="1" maxItems="1"/>
+			<flux:field.input name="settings.imageTitle"/>
+			<flux:field.input name="settings.maxWidth" default="400" />
+			<flux:field.select name="settings.imageAlign" default="left" items="left,center,right" />
+			<flux:field.input name="settings.link" />
+			<flux:field.input name="settings.more" />
+			<flux:form.content name="content"/>
+			<flux:field.select name="settings.responsiveViewImage" default="visible" items="visible,hidden-xs,hidden-sm,hidden-md,hidden-lg,visible-xs,visible-sm,visible-md,visible-lg" />
+			<flux:field.select name="settings.responsiveViewText" default="visible" items="visible,hidden-xs,hidden-sm,hidden-md,hidden-lg,visible-xs,visible-sm,visible-md,visible-lg" />
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<div style="text-align: center">
+			<v:media.image src="{settings.image}" alt="" width="100" />
+		</div>
+	</f:section>
+
+	<f:section name="Main">
+		<div class="textImage {settings.imageAlign}">
+			<div class="textImageCol {settings.responsiveViewImage}">
+				<f:if condition="{settings.link}"><a href="{settings.link}"></f:if>
+				<f:image src="{settings.image}" width="{settings.maxWidth}" class="img-responsive" alt="{settings.imageTitle}"/>
+				<f:if condition="{settings.link}"></a></f:if>
+			</div>
+			<div class="textImageCol {settings.responsiveViewText}">
+				<flux:content.render area="content"/>
+				<f:if condition="{settings.more}"><f:if condition="{settings.link}"><a href="{settings.link}" title="see more" class="textImageMore">{settings.more}</a></f:if></f:if>
+			</div>
+		</div>
+	</f:section>
+
+</div>
