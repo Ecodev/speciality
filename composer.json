@@ -4,5 +4,8 @@
 	"description": "Based extension providing a set of configuration and templates for your website. Everyone is special...",
 	"homepage": "https://github.com/Ecodev/speciality.git",
 	"license": ["GPL-2.0+"],
-	"version": "1.2.0-dev"
+	"replace": {
+		"speciality": "self.version",
+		"typo3-ter/speciality": "self.version"
+	}
 }
