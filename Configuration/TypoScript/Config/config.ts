@@ -46,9 +46,6 @@ config {
 	# html5? Yeah!
 	doctype = html5
 
-	# htmlTag_setParams
-	htmlTag_setParams = lang="{$config.language}" class="no-js"
-
 	# XML? Not that!
 	xmlprologue = none
 

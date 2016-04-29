@@ -10,6 +10,7 @@ config {
 	language = en
 	locale_all = en_GB.UTF-8
 	htmlTag_langKey = en_GB
+	htmlTag_setParams = lang="en" class="no-js"
 }
 
 [globalVar = GP:L = 1]
@@ -18,6 +19,7 @@ config {
 		language = fr
 		locale_all = fr_FR.UTF-8
 		htmlTag_langKey = fr_FR
+		htmlTag_setParams = lang="fr" class="no-js"
 	}
 [end]
 
@@ -27,6 +29,7 @@ config {
 		language = de
 		locale_all = de_DE.UTF-8
 		htmlTag_langKey = de_DE
+		htmlTag_setParams = lang="de" class="no-js"
 	}
 [end]
 
