@@ -26,12 +26,10 @@ module.exports = (grunt) ->
 	# CSS files
 		css:
 			raw_files: [
-				"<%= dir.temp %>/Source/*.css"
-				"<%= dir.components %>/jQuery-Validation-Engine/css/validationEngine.jquery.css"
-				"<%= dir.components %>/jquery.ui/themes/base/core.css" # required for DatePicker
-				"<%= dir.components %>/jquery.ui/themes/base/datepicker.css"
-				"<%= dir.components %>/jquery.ui/themes/base/theme.css" # required for DatePicker
-				"<%= dir.source %>/StyleSheets/Site/*.css"
+				#"<%= dir.components %>/jQuery-Validation-Engine/css/validationEngine.jquery.css"
+				#"<%= dir.components %>/jquery.ui/themes/base/core.css"
+				#"<%= dir.components %>/jquery.ui/themes/base/theme.css"
+				"<%= dir.build %>/StyleSheets/rte.css"
 			]
 
 	############################ Assets ############################
@@ -173,7 +171,7 @@ module.exports = (grunt) ->
 			css:
 				src: [
 					"<%= dir.temp %>/Source/*.css"
-					"<%= dir.source %>/StyleSheets/Site/*.css"
+					"<%= css.raw_files %>"
 				],
 				dest: "<%= dir.build %>/StyleSheets/site.css",
 			options:

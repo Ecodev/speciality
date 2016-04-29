@@ -11,13 +11,6 @@ plugin.tx_vhs.settings.asset {
 		type = css
 	}
 
-	rteCss {
-		// to-do: could be merged into site.min.css in the Grunt build chain.
-		path = EXT:speciality/Resources/Public/StyleSheets/rte.min.css
-		dependencies = mainCss
-		type = css
-	}
-
 	mainJs {
 		path = EXT:speciality/Resources/Public/JavaScript/site.min.js
 		group = js
