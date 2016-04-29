@@ -1084,15 +1084,6 @@
 			<trans-unit id="field.carousel.categories">
 				<source>Carousel: categories of images displayed (comma separated values)</source>
 			</trans-unit>
-			<trans-unit id="field.carousel.width">
-				<source>Carousel: width of images</source>
-			</trans-unit>
-			<trans-unit id="field.carousel.height">
-				<source>Carousel: height of images</source>
-			</trans-unit>
-			<trans-unit id="field.carousel.caption">
-				<source>Carousel: display caption or not?</source>
-			</trans-unit>
 
 			<trans-unit id="lead-text">
 				<source>Acme - a company making everything</source>
