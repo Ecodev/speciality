@@ -57,10 +57,10 @@ config {
 	#baseURL = http://{$config.domain}/
 
 	# For pages
-	index_enable = {$config.index_enable}
+	index_enable = 1
 
 	# For documents
-	index_externals = {$config.index_externals}
+	index_externals = 0
 
 	#
 	index_metatags = 0

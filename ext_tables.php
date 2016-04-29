@@ -10,11 +10,11 @@ $basePath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('special
 
 // Default User TSConfig to be added in any case.
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
-    <INCLUDE_TYPOSCRIPT: source="DIR:EXT:speciality/Configuration/UserTS" extensions="ts">
+    <INCLUDE_TYPOSCRIPT: source="DIR:EXT:speciality/Configuration/UserTS">
 ');
 
 // New icons for the BE
-if (TYPO3_MODE == 'BE') {
+if (TYPO3_MODE === 'BE') {
 
     $icons = array('category', 'comment', 'storage', 'news', 'people');
     foreach ($icons as $icon) {

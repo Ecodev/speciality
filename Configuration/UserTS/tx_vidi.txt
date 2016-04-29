@@ -1,0 +1,15 @@
+#######################
+# Vidi BE configuration
+#######################
+
+tx_vidi {
+	dataType {
+		fe_users {
+			storagePid = 29
+		}
+
+		fe_groups {
+			storagePid = 29
+		}
+	}
+}

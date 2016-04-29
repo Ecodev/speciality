@@ -32,4 +32,3 @@ config {
 		htmlTag_setParams = lang="de" class="no-js"
 	}
 [end]
-

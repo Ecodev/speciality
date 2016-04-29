@@ -8,16 +8,3 @@ mod.web_list {
 	itemsLimitSingleTable = 1000
 	itemsLimitPerTable = 50
 }
-
-#@todo rename mod.tx_vidi
-tx_vidi {
-	dataType {
-		fe_users {
-			storagePid = 29
-		}
-
-		fe_groups {
-			storagePid = 29
-		}
-	}
-}
