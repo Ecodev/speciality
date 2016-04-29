@@ -2,42 +2,35 @@
 // Site styles
 // --------------------------------------------------
 
-label {
-  font-weight: normal;
-  line-height: 1.8;
+a[class="external-link"]:after,
+a[rel="external"]:after {
+  content: url("/typo3conf/ext/speciality/Resources/Public/Images/ext.gif");
+  padding-left: 1px;
 }
 
-.form-group {
-  margin-bottom: 5px;
+a[rel="redirect"]:after {
+  content: url("/typo3conf/ext/speciality/Resources/Public/Images/redir.gif");
+  padding-left: 1px;
 }
 
-.csc-mailform-field {
-
-  input[type=checkbox], input[type=radio] {
-    display: block;
-    margin: 0;
-  }
-
-  input[type=text], textarea {
-    display: block;
-    width: 100%;
-    padding: 6px 12px;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-    background-color: #FFF;
-    background-image: none;
-    border: 1px solid #CCC;
-    border-radius: 4px;
-  }
-
-  textarea {
-    height: auto;
-  }
+a[rel="email"]:after {
+  content: url("/typo3conf/ext/speciality/Resources/Public/Images/email.png");
+  padding-left: 1px;
 }
 
-.addthis_toolbox {
-  margin-top: 10px;
+a[rel="pdf"]:after {
+  content: url("/typo3conf/ext/speciality/Resources/Public/Images/pdf.gif");
+  padding-left: 1px;
+}
+
+a[rel="doc"]:after {
+  content: url("/typo3conf/ext/speciality/Resources/Public/Images/doc.gif");
+  padding-left: 1px;
+}
+
+a[rel="xls"]:after {
+  content: url("/typo3conf/ext/speciality/Resources/Public/Images/xls.gif");
+  padding-left: 1px;
 }
 
 .news-img-caption {
@@ -212,143 +205,6 @@ label {
   }
 }
 
-/* CSS Style Content below
--------------------------------------------------- */
-.csc-default {
-  clear: both;
-}
-
-/* Reset figure styling */
-DIV.csc-textpic .csc-textpic-imagewrap FIGURE,
-DIV.csc-textpic FIGURE.csc-textpic-imagewrap {
-  margin: 0;
-  display: table;
-}
-
-DIV.csc-textpic .csc-textpic-imagewrap .csc-textpic-image {
-  margin-bottom: 10px;
-}
-
-/* Multiple Image Layout Options */
-DIV.csc-textpic-imagecolumn, TD.csc-textpic-imagecolumn .csc-textpic-image {
-  margin-right: 10px;
-}
-
-DIV.csc-textpic DIV.csc-textpic-imagecolumn {
-  float: left;
-}
-
-DIV.csc-textpic, DIV.csc-textpic DIV.csc-textpic-imagerow, UL.csc-uploads LI {
-  overflow: hidden;
-}
-
-/* Position: In text, right */
-.csc-textpic-intext-left .csc-textpic-imagewrap {
-  float: left;
-}
-
-.csc-textpic-intext-left .csc-textpic-imagewrap,
-.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap {
-  margin-right: 10px;
-}
-
-/* Position: In text, right */
-.csc-textpic-intext-right .csc-textpic-imagewrap {
-  float: right;
-}
-
-.csc-textpic-intext-right .csc-textpic-imagewrap,
-.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap {
-  margin-left: 10px;
-}
-
-/* Position: Beside text, left */
-.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap {
-  float: left;
-}
-
-/* Position: Beside text, right */
-.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap {
-  float: right;
-}
-
-/* Position: Above, center */
-.csc-textpic-center .csc-textpic-center-outer {
-  position: relative;
-  float: right;
-  right: 50%;
-}
-
-.csc-textpic-center .csc-textpic-center-inner {
-  position: relative;
-  float: right;
-  right: -50%;
-}
-
-.csc-textpic-center .csc-textpic-imagewrap, .csc-textpic-center .csc-textpic-imagewrap {
-  overflow: hidden;
-}
-
-/* Position: Above, right */
-.csc-textpic-right .csc-textpic-imagewrap {
-  float: right;
-}
-
-.csc-textpic-right .csc-textpic-text {
-  clear: right;
-}
-
-/* Position: Below, right */
-.csc-textpic-right .csc-textpic-imagewrap {
-  float: right;
-}
-
-.csc-textpic .csc-textpic-imagecolumn {
-  float: left;
-}
-
-figcaption {
-  display: none;
-}
-
-/* Make the form in the top nav look good */
-.input-append, .input-prepend {
-  margin-bottom: 0px;
-}
-
-/* Give room to main block elements for anchor links */
-aside[role=complementary] > div.csc-default,
-div[role=section] > div.csc-default {
-  padding-top: 30px;
-}
-
-div[role=main] h1,
-div[role=main] h2,
-div[role=main] h3,
-div[role=main] h4,
-div[role=main] h5,
-div[role=main] h6 {
-  color: #444;
-  margin: 5px 0;
-}
-
-.csc-header {
-  padding-bottom: 9px;
-  margin: 20px 0 20px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.anchor {
-  color: #666;
-  font-size: 10pt;
-  padding-left: 10px;
-  vertical-align: middle;
-  line-height: 10px;
-}
-
-.anchor .icon {
-  text-decoration: none;
-}
 
 /* Search result pagination from indexed_search plugin */
 ul.browsebox {
