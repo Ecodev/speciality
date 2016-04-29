@@ -7,23 +7,19 @@
 
 	<f:section name="Configuration">
 		<flux:form id="front" label="Front Page" icon="{f:uri.resource(path: 'Backend/Icons/HomePage.png')}">
-
-			<!-- Options visible on the page property -->
-			<flux:field.input name="settings.carousel.categories" label="LLL:field.carousel.categories" eval="trim" default="4" />
-			<flux:field.input name="settings.carousel.width" label="LLL:field.carousel.width" eval="trim" default="1200"/>
-			<flux:field.input name="settings.carousel.height" label="LLL:field.carousel.height" eval="trim" default="340"/>
-			<flux:field.checkbox name="settings.carousel.caption" label="LLL:field.carousel.caption"  default="1"/>
+			<f:comment>
+				<!-- Options visible on the page property -->
+				<!-- Just a commented example... -->
+				<flux:field.input name="settings.carousel.categories" label="LLL:field.carousel.categories" eval="trim" default="4" />
+			</f:comment>
 		</flux:form>
 
 		<!-- Grid displayed in the Page module -->
 		<flux:grid>
 			<flux:grid.row>
-				<flux:grid.column colPos="0" label="Main Content"/>
+				<flux:grid.column colPos="0" name="main" label="Main Content"/>
 			</flux:grid.row>
 		</flux:grid>
-	</f:section>
-
-	<f:section name="Preview">
 	</f:section>
 
 	<f:section name="Main">
