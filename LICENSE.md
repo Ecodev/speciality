@@ -1,6 +1,6 @@
 ### Copyright notice
 
-> (c) Fabien Udriot <fabien@omic.ch>
+> (c) Fabien Udriot <fabien@ecodev.ch>
 > All rights reserved
 
 This repository is part of the TYPO3 project. The TYPO3 project is
