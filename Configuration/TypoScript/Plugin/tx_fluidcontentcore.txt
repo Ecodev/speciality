@@ -1,0 +1,9 @@
+###################################################
+# Fluid Content Core
+###################################################
+
+plugin.tx_fluidcontentcore {
+        settings {
+                container.classNames =
+        }
+}
