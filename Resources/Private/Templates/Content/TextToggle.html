@@ -1,0 +1,54 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+	<f:layout name="Content"/>
+
+	<f:section name="Configuration">
+		<flux:form id="TextToggle"
+		           options="{group: 'Bootstrap',Fluidcontent: {sorting: 50}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/Text.png\')}'}">
+			<flux:field.text name="settings.mainText"
+			                 enableRichText="true"
+			                 defaultExtras="richtext[copy]:rte_transform[mode=ts_css]"/>
+			<flux:field.input name="settings.readMoreText"/>
+			<flux:field.text name="settings.collapsibleText"
+			                 enableRichText="true"
+			                 defaultExtras="richtext[copy]:rte_transform[mode=ts_css]"/>
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<div>
+			<strong>
+				<f:translate key="flux.TextToggle.fields.settings.mainText"/>
+			</strong>
+		</div>
+		<div>{settings.mainText}</div>
+		<div>
+			<strong>
+				<f:translate key="flux.TextToggle.fields.settings.readMoreText"/>
+			</strong>
+		</div>
+		<div>{settings.readMoreText}</div>
+		<div>
+			<strong>
+				<f:translate key="flux.TextToggle.fields.settings.collapsibleText"/>
+			</strong>
+		</div>
+		<div>{settings.collapsibleText}</div>
+	</f:section>
+
+	<f:section name="Main">
+		<p>
+			{settings.mainText -> f:format.html()}
+		</p>
+		<div class="collapse-group">
+			<div class="collapse" id="collapsibleText{record.uid}">
+				{settings.collapsibleText -> f:format.html()}
+			</div>
+			<a data-toggle="collapse" href="#" onclick="return false" data-target="#collapsibleText{record.uid}">{settings.readMoreText} &raquo;</a>
+		</div>
+	</f:section>
+
+</div>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
 	<file source-language="en" datatype="plaintext" original="messages" date="2012-10-17T17:55:17Z"
-	      product-name="ext-speciality">
+		  product-name="ext-speciality">
 		<header/>
 		<body>
 			<!-- Content -->
@@ -1054,6 +1054,25 @@
             </trans-unit>
             <trans-unit id="flux.TextImage.fields.settings.more" xml:space="preserve">
                 <source>"See more" button label</source>
+            </trans-unit>
+			<!-- /TextImage.html -->
+
+			<!-- TextToggle.html -->
+			<trans-unit id="flux.TextToggle" xml:space="preserve">
+                <source>Text toggle</source>
+            </trans-unit>
+            <trans-unit id="flux.TextToggle.description" xml:space="preserve">
+                <source>Add a read more link to toggle the next block of content</source>
+            </trans-unit>
+
+            <trans-unit id="flux.TextToggle.fields.settings.mainText" xml:space="preserve">
+                <source>Main text</source>
+            </trans-unit>
+            <trans-unit id="flux.TextToggle.fields.settings.readMoreText" xml:space="preserve">
+                <source>Read more text</source>
+            </trans-unit>
+            <trans-unit id="flux.TextToggle.fields.settings.collapsibleText" xml:space="preserve">
+                <source>Collapsible text</source>
             </trans-unit>
 			<!-- /TextImage.html -->
 
