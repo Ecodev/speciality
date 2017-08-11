@@ -4,14 +4,21 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 	<f:section name="LanguageMenu">
-		<v:page.languageMenu hideNotTranslated="1" order="0,1,2" class="list-inline" defaultLanguageLabel="English"
+		<v:page.languageMenu hideNotTranslated="1"
+		                     order="0,1,2"
+		                     class="list-inline"
+		                     layout="name"
+		                     style="width: 40px"
+		                     defaultLanguageLabel="English"
 		                     defaultIsoFlag="gb"/>
 
 		<v:security.allow anyBackendUser="true">
 			<div class="alert alert-success">
 				The menu language above is generated in file
 				<span style=" font-size: 12px; font-family: monospace;">EXT:speciality/Resources/Private/Partials/LanguageMenu.html</span>
-				by a Fluid View Helper <strong>v:page.languageMenu</strong>. Its documentation is available on <a href="https://fluidtypo3.org/viewhelpers/vhs/Page/LanguageMenuViewHelper.html">its API page</a>.
+				by a Fluid View Helper <strong>v:page.languageMenu</strong>. Its documentation is available on
+				<a href="https://fluidtypo3.org/viewhelpers/vhs/Page/LanguageMenuViewHelper.html">its API page</a>
+				.
 			</div>
 		</v:security.allow>
 	</f:section>
