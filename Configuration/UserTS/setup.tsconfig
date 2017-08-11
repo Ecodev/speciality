@@ -12,7 +12,7 @@ setup.defaults {
 	recursiveDelete = 1
 	noOnChangeAlertInTypeFields = 0
 	navFrameWidth = 150
-	startModule = web_list
+	startModule = web_ViewpageView
 }
 
 # Overridden User value
