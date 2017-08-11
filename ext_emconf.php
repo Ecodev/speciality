@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = [
 			'flux' => '',
 			'fluidpages' => '',
 			'fluidcontent' => '',
-			'fluidcontent_core' => '',
+			'fluid_styled_content' => '',
 			'vhs' => '',
 		],
 		'conflicts' => [
