@@ -1,6 +1,6 @@
 <?php
 if (!defined('TYPO3_MODE')) {
-	die ('Access denied.');
+    die ('Access denied.');
 }
 
 
@@ -10,9 +10,9 @@ $GLOBALS['TCA']['tt_content']['types']['image']['showitem'] = '
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.images,
                 image,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.imagelinks;imagelinks,
-	    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-	    		--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.image_settings;image_settings,
-		        --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
+        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.image_settings;image_settings,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
         --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,

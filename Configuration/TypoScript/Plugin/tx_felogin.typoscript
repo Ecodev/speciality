@@ -3,5 +3,5 @@
 ###################################################
 
 plugin.tx_felogin_pi1 {
-	templateFile = EXT:speciality/Resources/Private/Plugins/FeLogin/FrontendLogin.html
+    templateFile = EXT:speciality/Resources/Private/Plugins/FeLogin/FrontendLogin.html
 }

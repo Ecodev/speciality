@@ -4,29 +4,29 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 
-	<f:section name="Header">
+    <f:section name="Header">
 
-		<!-- Default header -->
-		<header class="jumbotron" role="banner">
+        <!-- Default header -->
+        <header class="jumbotron" role="banner">
 
-			<f:render section="NavigationSpecial" partial="NavigationSpecial" optional="true" arguments="{_all}"/>
+            <f:render section="NavigationSpecial" partial="NavigationSpecial" optional="true" arguments="{_all}"/>
 
-			<f:image src="EXT:speciality/Resources/Public/Images/logo.png" alt="Logo" class="pull-left"/>
-			<h1>My company name</h1>
+            <f:image src="EXT:speciality/Resources/Public/Images/logo.png" alt="Logo" class="pull-left"/>
+            <h1>My company name</h1>
 
-			<p class="lead">
-				<f:translate key="lead-text" extensionName="speciality"/>
+            <p class="lead">
+                <f:translate key="lead-text" extensionName="speciality"/>
 
-				<v:security.allow anyBackendUser="true">
-					<br/>
-					<small style="font-size: 65%;  padding-left: 0" class="alert alert-success">
-						<f:translate key="lead-text-tip" extensionName="speciality"/>
-						<span style=" font-size: 12px; font-family: monospace;">EXT:speciality/Resources/Private/Language/language.xlf</span>
-					</small>
-				</v:security.allow>
-			</p>
-		</header>
+                <v:security.allow anyBackendUser="true">
+                    <br/>
+                    <small style="font-size: 65%;  padding-left: 0" class="alert alert-success">
+                        <f:translate key="lead-text-tip" extensionName="speciality"/>
+                        <span style=" font-size: 12px; font-family: monospace;">EXT:speciality/Resources/Private/Language/language.xlf</span>
+                    </small>
+                </v:security.allow>
+            </p>
+        </header>
 
-	</f:section>
+    </f:section>
 
 </div>

@@ -2,35 +2,35 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-	<!-- @todo find a better way for generating the form such a plugin -->
-	<f:section name="SearchForm">
+    <!-- @todo find a better way for generating the form such a plugin -->
+    <f:section name="SearchForm">
 
-		<form action="{f:uri.page(pageUid:17)}" method="post" class="navbar-form navbar-right" role="search">
-			<input type="hidden" name="tx_indexedsearch[_sections]" value="0">
-			<input type="hidden" name="tx_indexedsearch[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_">
-			<input type="hidden" name="tx_indexedsearch[pointer]" id="tx_indexedsearch_pointer" value="0">
-			<input type="hidden" name="tx_indexedsearch[ext]" value="">
-			<input type="hidden" name="tx_indexedsearch[type]" value="0">
-			<input type="hidden" name="tx_indexedsearch[defOp]" value="0">
-			<input type="hidden" name="tx_indexedsearch[media]" value="-1">
-			<input type="hidden" name="tx_indexedsearch[order]" value="rank_flag">
-			<input type="hidden" name="tx_indexedsearch[group]" value="sections">
-			<input type="hidden" name="tx_indexedsearch[lang]" value="-1">
-			<input type="hidden" name="tx_indexedsearch[desc]" value="0">
-			<input type="hidden" name="tx_indexedsearch[results]" value="10">
+        <form action="{f:uri.page(pageUid:17)}" method="post" class="navbar-form navbar-right" role="search">
+            <input type="hidden" name="tx_indexedsearch[_sections]" value="0">
+            <input type="hidden" name="tx_indexedsearch[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_">
+            <input type="hidden" name="tx_indexedsearch[pointer]" id="tx_indexedsearch_pointer" value="0">
+            <input type="hidden" name="tx_indexedsearch[ext]" value="">
+            <input type="hidden" name="tx_indexedsearch[type]" value="0">
+            <input type="hidden" name="tx_indexedsearch[defOp]" value="0">
+            <input type="hidden" name="tx_indexedsearch[media]" value="-1">
+            <input type="hidden" name="tx_indexedsearch[order]" value="rank_flag">
+            <input type="hidden" name="tx_indexedsearch[group]" value="sections">
+            <input type="hidden" name="tx_indexedsearch[lang]" value="-1">
+            <input type="hidden" name="tx_indexedsearch[desc]" value="0">
+            <input type="hidden" name="tx_indexedsearch[results]" value="10">
 
-			<div class="input-group">
+            <div class="input-group">
 
-				<div class="input-group">
-					<span class="input-group-addon">
-						<span class="glyphicon glyphicon-search"></span>
-					</span>
-					<input class="form-control input" type="text"
-					       name="tx_indexedsearch[sword]" value=""
-					       placeholder="Search...">
-				</div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </span>
+                    <input class="form-control input" type="text"
+                           name="tx_indexedsearch[sword]" value=""
+                           placeholder="Search...">
+                </div>
 
-			</div>
-		</form>
-	</f:section>
+            </div>
+        </form>
+    </f:section>
 </div>

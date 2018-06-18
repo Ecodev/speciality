@@ -1,33 +1,33 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
-	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-	<f:layout name="Page" />
+    <f:layout name="Page" />
 
-	<f:section name="Configuration">
-		<flux:form id="front" label="Front Page" options="{icon: 'EXT:speciality/Resources/Public/Backend/Icons/HomePage.png'}">
-			<f:comment>
-				<!-- Options visible on the page property -->
-				<!-- Just a commented example... -->
-				<flux:field.input name="settings.carousel.categories" label="LLL:field.carousel.categories" eval="trim" default="4" />
-			</f:comment>
-		</flux:form>
+    <f:section name="Configuration">
+        <flux:form id="front" label="Front Page" options="{icon: 'EXT:speciality/Resources/Public/Backend/Icons/HomePage.png'}">
+            <f:comment>
+                <!-- Options visible on the page property -->
+                <!-- Just a commented example... -->
+                <flux:field.input name="settings.carousel.categories" label="LLL:field.carousel.categories" eval="trim" default="4" />
+            </f:comment>
+        </flux:form>
 
-		<!-- Grid displayed in the Page module -->
-		<flux:grid>
-			<flux:grid.row>
-				<flux:grid.column colPos="0" name="main" label="Main Content"/>
-			</flux:grid.row>
-		</flux:grid>
-	</f:section>
+        <!-- Grid displayed in the Page module -->
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column colPos="0" name="main" label="Main Content"/>
+            </flux:grid.row>
+        </flux:grid>
+    </f:section>
 
-	<f:section name="Main">
-		<div class="row" role="main">
-			<div class="col-md-12" role="section">
-				<v:content.render column="0"/>
-			</div>
-		</div>
-	</f:section>
+    <f:section name="Main">
+        <div class="row" role="main">
+            <div class="col-md-12" role="section">
+                <v:content.render column="0"/>
+            </div>
+        </div>
+    </f:section>
 
 </div>

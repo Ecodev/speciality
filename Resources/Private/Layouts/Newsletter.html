@@ -1,61 +1,61 @@
 <f:layout name="Newsletter"/>
 <style>
 
-	body {
-		font-family: Arial, serif;
-		font-size: 13px;
-		line-height: 1.42857;
-		color: #333;
-	}
+    body {
+        font-family: Arial, serif;
+        font-size: 13px;
+        line-height: 1.42857;
+        color: #333;
+    }
 
-	#newsletter-content {
-		width: 970px;
-		margin: auto;
-	}
+    #newsletter-content {
+        width: 970px;
+        margin: auto;
+    }
 
-	.alert-info {
-		padding: 8px 35px 8px 14px;
-		margin-bottom: 20px;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-		border: 1px solid #bce8f1;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-		color: #3a87ad;
-		background-color: #d9edf7;
-	}
+    .alert-info {
+        padding: 8px 35px 8px 14px;
+        margin-bottom: 20px;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        border: 1px solid #bce8f1;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        color: #3a87ad;
+        background-color: #d9edf7;
+    }
 
 </style>
 <div id="newsletter-content">
-	<div>
-		<f:image src="EXT:speciality/Resources/Public/Images/logo.png" alt="Logo" style="float: left"/>
-		<h1 style="padding-top: 28px; margin-left: 125px">My company name</h1>
-	</div>
+    <div>
+        <f:image src="EXT:speciality/Resources/Public/Images/logo.png" alt="Logo" style="float: left"/>
+        <h1 style="padding-top: 28px; margin-left: 125px">My company name</h1>
+    </div>
 
-	<div style="clear: both; padding-top: 20px">
-		<!--TYPO3SEARCH_begin-->
-		<f:render section="Main"/>
-		<!--TYPO3SEARCH_end-->
-	</div>
+    <div style="clear: both; padding-top: 20px">
+        <!--TYPO3SEARCH_begin-->
+        <f:render section="Main"/>
+        <!--TYPO3SEARCH_end-->
+    </div>
 
-	<p class="alert-info">
-		Newsletter are tricky to format. Check <a href="https://www.google.ch/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=newsletter+code+tips">online</a> for tips & tricks.
-	</p>
+    <p class="alert-info">
+        Newsletter are tricky to format. Check <a href="https://www.google.ch/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=newsletter+code+tips">online</a> for tips & tricks.
+    </p>
 
-	<p class="alert-info">
-		To remove this info box, edit file <code>typo3conf/ext/speciality/Resources/Private/Layouts/Newsletter.html</code>.
-	</p>
+    <p class="alert-info">
+        To remove this info box, edit file <code>typo3conf/ext/speciality/Resources/Private/Layouts/Newsletter.html</code>.
+    </p>
 
-	<p class="alert-info">
-		This page has a special TS template record to remove the default CSS / JS from Bootstrap.
-		Open this record and activate the commented TypoScript to remove the footer below on the browser.
-	</p>
+    <p class="alert-info">
+        This page has a special TS template record to remove the default CSS / JS from Bootstrap.
+        Open this record and activate the commented TypoScript to remove the footer below on the browser.
+    </p>
 
-	<footer>
-		<f:render section="FooterNewsletter" partial="FooterNewsletter"/>
-	</footer>
+    <footer>
+        <f:render section="FooterNewsletter" partial="FooterNewsletter"/>
+    </footer>
 </div>
 <v:page.footer>
-	<f:render section="Stats" partial="Stats" arguments="{_all}"/>
+    <f:render section="Stats" partial="Stats" arguments="{_all}"/>
 </v:page.footer>
 {namespace s=Ecodev\Speciality\ViewHelpers}

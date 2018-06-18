@@ -5,17 +5,17 @@
 # Default User value
 # @doc http://docs.typo3.org/typo3cms/TSconfigReference/UserTsconfig/Setup/Index.html
 setup.defaults {
-	titleLen = 80
-	thumbnailsByDefault = 1
-	edit_RTE = 1
-	copyLevels = 9
-	recursiveDelete = 1
-	noOnChangeAlertInTypeFields = 0
-	navFrameWidth = 150
-	startModule = web_ViewpageView
+    titleLen = 80
+    thumbnailsByDefault = 1
+    edit_RTE = 1
+    copyLevels = 9
+    recursiveDelete = 1
+    noOnChangeAlertInTypeFields = 0
+    navFrameWidth = 150
+    startModule = web_ViewpageView
 }
 
 # Overridden User value
 setup.override {
-#	startModule = list
+#    startModule = list
 }

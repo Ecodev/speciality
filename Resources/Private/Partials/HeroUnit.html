@@ -3,16 +3,16 @@
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-	<f:section name="HeroUnit">
-		<v:content.render column="1" as="heroUnitContentElements">
-			<f:if condition="{heroUnitContentElements}">
-				<div class="jumbotron">
-					<f:for each="{heroUnitContentElements}" as="heroContentElement">
-						<f:format.raw>{heroContentElement}</f:format.raw>
-					</f:for>
-				</div>
-			</f:if>
-		</v:content.render>
-	</f:section>
+    <f:section name="HeroUnit">
+        <v:content.render column="1" as="heroUnitContentElements">
+            <f:if condition="{heroUnitContentElements}">
+                <div class="jumbotron">
+                    <f:for each="{heroUnitContentElements}" as="heroContentElement">
+                        <f:format.raw>{heroContentElement}</f:format.raw>
+                    </f:for>
+                </div>
+            </f:if>
+        </v:content.render>
+    </f:section>
 
 </div>

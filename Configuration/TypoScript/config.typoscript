@@ -4,56 +4,56 @@
 
 config {
 
-	# How to handle localization, possible values:
-	# content_fallback: the system will always operate with the selected language even if the page is not translated with a page overlay record.
-	# strict: the system will report an error if the requested translation does not exist
-	# ignore: the system will stay with the selected language even if the page is not translated
-	# @todo fix me! it looks the setting is not taken into account with latest version of fedext
-	# sys_language_mode = content_fallback
+    # How to handle localization, possible values:
+    # content_fallback: the system will always operate with the selected language even if the page is not translated with a page overlay record.
+    # strict: the system will report an error if the requested translation does not exist
+    # ignore: the system will stay with the selected language even if the page is not translated
+    # @todo fix me! it looks the setting is not taken into account with latest version of fedext
+    # sys_language_mode = content_fallback
 
-	# Records that are not localized till be hidden
-	# Possible value hideNonTranslated | int (the sys_language)
-	# @todo fix me! it looks the setting is not taken into account with latest version of fedext
-	#sys_language_overlay = hideNonTranslated
+    # Records that are not localized till be hidden
+    # Possible value hideNonTranslated | int (the sys_language)
+    # @todo fix me! it looks the setting is not taken into account with latest version of fedext
+    #sys_language_overlay = hideNonTranslated
 
-	# If set, the stdWrap property “prefixComment” will be disabled, thus preventing any revealing and space-consuming comments in the HTML source code.
-	disablePrefixComment = 1
+    # If set, the stdWrap property “prefixComment” will be disabled, thus preventing any revealing and space-consuming comments in the HTML source code.
+    disablePrefixComment = 1
 
-	# If set, the inline styles TYPO3 controls in the core are written to a file
-	inlineStyle2TempFile = 1
+    # If set, the inline styles TYPO3 controls in the core are written to a file
+    inlineStyle2TempFile = 1
 
-	# Charset, should always be utf-8
-	renderCharset = utf-8
+    # Charset, should always be utf-8
+    renderCharset = utf-8
 
-	#
-	metaCharset = utf-8
+    #
+    metaCharset = utf-8
 
-	# Setting up the language variable "L" to be passed along with links
-	linkVars = L(int), print
+    # Setting up the language variable "L" to be passed along with links
+    linkVars = L(int), print
 
-	# html5? Yeah!
-	doctype = html5
+    # html5? Yeah!
+    doctype = html5
 
-	# XML? Not that!
-	xmlprologue = none
+    # XML? Not that!
+    xmlprologue = none
 
-	#
-	prefixLocalAnchors = all
+    #
+    prefixLocalAnchors = all
 
-	# The <base> tag in the header of the document which is used by RealURL
-	# Not set for the time being to stay portable
-	#baseURL = http://{$config.domain}/
+    # The <base> tag in the header of the document which is used by RealURL
+    # Not set for the time being to stay portable
+    #baseURL = http://{$config.domain}/
 
-	# For pages
-	index_enable = 1
+    # For pages
+    index_enable = 1
 
-	# For documents
-	index_externals = 0
+    # For documents
+    index_externals = 0
 
-	#
-	index_metatags = 0
+    #
+    index_metatags = 0
 
-	# If set, then every “typolink” is checked whether it's linking to a page within the current rootline of the site.
+    # If set, then every “typolink” is checked whether it's linking to a page within the current rootline of the site.
     typolinkCheckRootline = 1
 
     # This option enables to create links across domains using current domain's linking scheme.
@@ -63,10 +63,10 @@ config {
     spamProtectEmailAddresses = ascii
 
     #
-	spamProtectEmailAddresses_atSubst = (at)
+    spamProtectEmailAddresses_atSubst = (at)
 
-	#
-	spamProtectEmailAddresses_lastDotSubst = (dot)
+    #
+    spamProtectEmailAddresses_lastDotSubst = (dot)
 
     # Enable RealURL
     tx_realurl_enable = 1
@@ -75,22 +75,22 @@ config {
     sendCacheHeaders = 1
 
     #
-	content_from_pid_allowOutsideDomain = 1
+    content_from_pid_allowOutsideDomain = 1
 
-	#
-	pageTitleFirst = 0
+    #
+    pageTitleFirst = 0
 
 
-	# If this value is set, then all relative links in TypoScript are prepended with this string.
-	# Used to convert relative paths to absolute paths.
-	absRefPrefix = /
+    # If this value is set, then all relative links in TypoScript are prepended with this string.
+    # Used to convert relative paths to absolute paths.
+    absRefPrefix = /
 
-	#
-	#headerComment = Integration and development - http://example.com/
+    #
+    #headerComment = Integration and development - http://example.com/
 
-	# Configure  site title
-	# Notice this configuration will be overridden
-	# by EXT:seo_basics if enabled and its static TS file loaded.
-	pageTitleSeparator = -
-	pageTitleSeparator.noTrimWrap = | | |
+    # Configure  site title
+    # Notice this configuration will be overridden
+    # by EXT:seo_basics if enabled and its static TS file loaded.
+    pageTitleSeparator = -
+    pageTitleSeparator.noTrimWrap = | | |
 }

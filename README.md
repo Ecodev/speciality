@@ -35,11 +35,11 @@ Notice also the new file structure of the [Public](https://github.com/Ecodev/boo
 
 ```
 
-	ls -l Resources/Public
+    ls -l Resources/Public
 
-	├── / (1)
-	├── /Source (2)
-	├── /BowerComponents (3)
+    ├── / (1)
+    ├── /Source (2)
+    ├── /BowerComponents (3)
 ```
 
 1. the generated output optimized for production. Never edit files as they will be overridden.
@@ -51,39 +51,39 @@ with this development workflow:
 
 ```
 
-	# Head to EXT:speciality
-	cd typo3conf/ext/speciality
+    # Head to EXT:speciality
+    cd typo3conf/ext/speciality
 
-	# Make sure to have bower installed
-	# If bower is not installed
-	# (sudo) npm install -g bower
-	bower --version
+    # Make sure to have bower installed
+    # If bower is not installed
+    # (sudo) npm install -g bower
+    bower --version
 
-	# Make sure to have grunt installed
-	# If Grunt ist not installed
-	# (sudo) npm install -g grunt-cli
-	grunt --version
+    # Make sure to have grunt installed
+    # If Grunt ist not installed
+    # (sudo) npm install -g grunt-cli
+    grunt --version
 
-	# Install local grunt modules
-	npm install
+    # Install local grunt modules
+    npm install
 
-	# Install Web Components (jQuery, ...)
-	bower install
+    # Install Web Components (jQuery, ...)
+    bower install
 
-	# Check whether Web Components need to be updated.
-	# The command will display the current version and the latest version available besides.
-	bower list
+    # Check whether Web Components need to be updated.
+    # The command will display the current version and the latest version available besides.
+    bower list
 
-	# If needed update Web Components versions.
-	edit bower.json
-	bower update
+    # If needed update Web Components versions.
+    edit bower.json
+    bower update
 
-	# Call grunt help
-	grunt help
+    # Call grunt help
+    grunt help
 
-	# Generate a new build including JavaScript, CSS, optimized images, ...
-	grunt build
+    # Generate a new build including JavaScript, CSS, optimized images, ...
+    grunt build
 
-	# Watch your asset and compile them as you edit them.
-	grunt watch
+    # Watch your asset and compile them as you edit them.
+    grunt watch
 ```

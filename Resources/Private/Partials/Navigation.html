@@ -3,45 +3,45 @@
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-	<f:section name="Navigation">
+    <f:section name="Navigation">
 
-		<div class="navbar navbar-top navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="{v:site.url()}" tabindex="1">
-						<v:site.name/>
-					</a>
-				</div>
-				<div class="navbar-collapse collapse">
-					<v:page.menu entryLevel="{v:variable.typoscript(path: 'lib.menu.main.entryLevel')}">
-						<ul class="nav navbar-nav">
-							<f:for each="{menu}" as="mainPage" iteration="iteration">
-								<li class="{mainPage.class}">
-									<a tabindex="{iteration.cycle -> v:math.sum(b: 10)}"
-									   href="{mainPage.link}"
-									   data-placement="bottom"
-									   title="{mainPage.abstract}"
-									   target="{f:if(condition: '{mainPage.target}', then: '{mainPage.target}', else: '_self')}"
-									   class="{mainPage.class}">
-										<f:if condition="{mainPage.nav_title} != '' ">
-											<f:then>{mainPage.nav_title}</f:then>
-											<f:else>{mainPage.title}</f:else>
-										</f:if>
-									</a>
-								</li>
-							</f:for>
-						</ul>
-					</v:page.menu>
+        <div class="navbar navbar-top navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{v:site.url()}" tabindex="1">
+                        <v:site.name/>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <v:page.menu entryLevel="{v:variable.typoscript(path: 'lib.menu.main.entryLevel')}">
+                        <ul class="nav navbar-nav">
+                            <f:for each="{menu}" as="mainPage" iteration="iteration">
+                                <li class="{mainPage.class}">
+                                    <a tabindex="{iteration.cycle -> v:math.sum(b: 10)}"
+                                       href="{mainPage.link}"
+                                       data-placement="bottom"
+                                       title="{mainPage.abstract}"
+                                       target="{f:if(condition: '{mainPage.target}', then: '{mainPage.target}', else: '_self')}"
+                                       class="{mainPage.class}">
+                                        <f:if condition="{mainPage.nav_title} != '' ">
+                                            <f:then>{mainPage.nav_title}</f:then>
+                                            <f:else>{mainPage.title}</f:else>
+                                        </f:if>
+                                    </a>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </v:page.menu>
 
-					<f:render section="SearchForm" partial="SearchForm" optional="true" arguments="{_all}"/>
-				</div>
-				<!--/.nav-collapse -->
-			</div>
-		</div>
-	</f:section>
+                    <f:render section="SearchForm" partial="SearchForm" optional="true" arguments="{_all}"/>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </f:section>
 </div>

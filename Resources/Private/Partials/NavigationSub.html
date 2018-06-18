@@ -4,34 +4,34 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 
-	<f:section name="NavigationSub">
+    <f:section name="NavigationSub">
 
-		<!-- sub-menu navigation, collapsible -->
-		<v:page.menu as="menu" levels="2" entryLevel="{v:variable.typoscript(path: 'lib.menu.sub.entryLevel')}" showCurrent="true"
-		             classActive="active" classCurrent="current"
-		             classHasSubpages="sub">
+        <!-- sub-menu navigation, collapsible -->
+        <v:page.menu as="menu" levels="2" entryLevel="{v:variable.typoscript(path: 'lib.menu.sub.entryLevel')}" showCurrent="true"
+                     classActive="active" classCurrent="current"
+                     classHasSubpages="sub">
 
-			<f:if condition="{menu}">
-				<nav role="navigation">
-					<ul class="nav navbar-list bs-docs-sidenav affix-top">
-						<f:for each="{menu}" as="item" iteration="iteration">
-							<li class="{item.class}">
-								<a href="{item.link}" class="{item.class}">
-									<i class="icon-chevron-right"></i>
-									<f:if condition="{item.nav_title}">
-										<f:then>{item.nav_title}</f:then>
-										<f:else>{item.title}</f:else>
-									</f:if>
-								</a>
-								<!-- Sub menu -->
-								<v:page.menu.sub pageUid="{item.uid}"/>
-							</li>
-						</f:for>
-					</ul>
-				</nav>
-			</f:if>
-		</v:page.menu>
+            <f:if condition="{menu}">
+                <nav role="navigation">
+                    <ul class="nav navbar-list bs-docs-sidenav affix-top">
+                        <f:for each="{menu}" as="item" iteration="iteration">
+                            <li class="{item.class}">
+                                <a href="{item.link}" class="{item.class}">
+                                    <i class="icon-chevron-right"></i>
+                                    <f:if condition="{item.nav_title}">
+                                        <f:then>{item.nav_title}</f:then>
+                                        <f:else>{item.title}</f:else>
+                                    </f:if>
+                                </a>
+                                <!-- Sub menu -->
+                                <v:page.menu.sub pageUid="{item.uid}"/>
+                            </li>
+                        </f:for>
+                    </ul>
+                </nav>
+            </f:if>
+        </v:page.menu>
 
-	</f:section>
+    </f:section>
 
 </div>
