@@ -7,15 +7,14 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'misc',
     'author_company' => 'Ecodev',
     'state' => 'stable',
-    'version' => '1.2.0-dev',
+    'version' => '1.3.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '7.6.0-7.99.99',
-            'flux' => '',
-            'fluidpages' => '',
-            'fluidcontent' => '',
-            'fluid_styled_content' => '',
-            'vhs' => '',
+            'typo3' => '8.7.0-8.7.99',
+            'flux' => '0.0.0-0.0.0',
+            'fluidpages' => '0.0.0-0.0.0',
+            'fluid_styled_content' => '0.0.0-0.0.0',
+            'vhs' => '0.0.0-0.0.0',
         ],
         'conflicts' => [
         ],
