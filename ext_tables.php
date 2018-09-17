@@ -1,9 +1,6 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-    die ('Access denied.');
-}
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('speciality', 'Configuration/TypoScript', 'Speciality: main template');
+if (!defined('TYPO3_MODE')) die ('Access denied.');
 
 # Add user TSConfig
 $basePath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('speciality');
@@ -32,7 +29,3 @@ if (TYPO3_MODE === 'BE') {
         );
     }
 }
-
-# Use Flux Core API for registering extension provider.
-\FluidTYPO3\Flux\Core::registerProviderExtensionKey('speciality', 'Page');
-\FluidTYPO3\Flux\Core::registerProviderExtensionKey('speciality', 'Content');
