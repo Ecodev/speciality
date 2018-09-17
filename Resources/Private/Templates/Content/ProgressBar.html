@@ -3,20 +3,26 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Content" />
+    <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="progressBar" options="{group: 'Bootstrap', Fluidcontent: {sorting: 650}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/ProgressBar.png\')}'}">
+        <flux:form id="progressBar">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/ProgressBar.png')}"/>
             <flux:form.sheet name="progressBar">
-                <flux:field.checkbox name="settings.progressBarAnimated" default="0" />
-                <flux:field.checkbox name="settings.progressBarStriped" default="0" />
+                <flux:field.checkbox name="settings.progressBarAnimated" default="0"/>
+                <flux:field.checkbox name="settings.progressBarStriped" default="0"/>
                 <flux:field.select name="settings.progressBarColor"
                                    items="progress-bar-success,progress-bar-info,progress-bar-warning,progress-bar-danger"
-                                   default="progress-bar-success" />
-                <flux:field.input name="settings.progressBarProgress" eval="int,trim" minimum="0" maximum="100" default="50">
-                    <flux:wizard.slider hideParent="TRUE" step="1" width="100" />
+                                   default="progress-bar-success"/>
+                <flux:field.input name="settings.progressBarProgress"
+                                  eval="int,trim"
+                                  minimum="0"
+                                  maximum="100"
+                                  default="50">
+                    <flux:wizard.slider hideParent="TRUE" step="1" width="100"/>
                 </flux:field.input>
-                <flux:field.checkbox name="settings.progressBarShowText" default="0" />
+                <flux:field.checkbox name="settings.progressBarShowText" default="0"/>
             </flux:form.sheet>
         </flux:form>
     </f:section>

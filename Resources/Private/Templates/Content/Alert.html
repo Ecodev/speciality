@@ -3,15 +3,17 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Content" />
+    <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="alert" options="{group: 'Bootstrap', Fluidcontent: {sorting: 500}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/Alert.png\')}'}">
-            <flux:field.input name="header" />
-            <flux:field.input name="closeLinkText" />
-            <flux:field.select name="class" items="info,success,warning,danger" default="info" />
-            <flux:field.checkbox name="isBlock" />
-            <flux:form.content name="content" />
+        <flux:form id="alert">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/Alert.png')}"/>
+            <flux:field.input name="header"/>
+            <flux:field.input name="closeLinkText"/>
+            <flux:field.select name="class" items="info,success,warning,danger" default="info"/>
+            <flux:field.checkbox name="isBlock"/>
+            <flux:form.content name="content"/>
         </flux:form>
     </f:section>
 
@@ -25,7 +27,7 @@
             <f:if condition="{header}">
                 <h1 class="alert-heading">{header}</h1>
             </f:if>
-            <flux:content.render area="content" />
+            <flux:content.render area="content"/>
         </div>
     </f:section>
 

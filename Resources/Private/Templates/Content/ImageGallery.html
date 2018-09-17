@@ -3,27 +3,28 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Content" />
+    <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="imgGallery"
-                   options="{group: 'Bootstrap', Fluidcontent: {sorting: 100}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/ImageGallery.png\')}'}">
+        <flux:form id="imgGallery">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/ImageGallery.png')}"/>
             <flux:form.sheet name="imgGallerySheetImages">
                 <flux:field.inline.fal name="settings.imgGalleryFalImageItems" multiple="TRUE"
                                        maxItems="20"
-                                       collapseAll="TRUE" />
+                                       collapseAll="TRUE"/>
             </flux:form.sheet>
             <flux:form.sheet name="imgGallerySheetAdvanced">
-                <flux:field.input name="settings.imgGalleryFalClassesModal" />
-                <flux:field.checkbox name="settings.imgGalleryFalShowPreviewTitle" default="1" />
-                <flux:field.checkbox name="settings.imgGalleryFalRenderHrefToOriginal" default="0" />
+                <flux:field.input name="settings.imgGalleryFalClassesModal"/>
+                <flux:field.checkbox name="settings.imgGalleryFalShowPreviewTitle" default="1"/>
+                <flux:field.checkbox name="settings.imgGalleryFalRenderHrefToOriginal" default="0"/>
                 <flux:field.select items="picture,footer" name="settings.imgGalleryFalPrevNextPosition"
-                                   default="footer" />
-                <flux:field.input name="settings.imgGalleryFalImageWidth" default="320" />
-                <flux:field.select name="settings.imgGalleryFalRowLg" items="2,3,4,6,12" default="4" />
-                <flux:field.select name="settings.imgGalleryFalRowMd" items="2,3,4,6,12" default="4" />
-                <flux:field.select name="settings.imgGalleryFalRowSm" items="2,3,4,6,12" default="3" />
-                <flux:field.select name="settings.imgGalleryFalRowXs" items="2,3,4,6,12" default="2" />
+                                   default="footer"/>
+                <flux:field.input name="settings.imgGalleryFalImageWidth" default="320"/>
+                <flux:field.select name="settings.imgGalleryFalRowLg" items="2,3,4,6,12" default="4"/>
+                <flux:field.select name="settings.imgGalleryFalRowMd" items="2,3,4,6,12" default="4"/>
+                <flux:field.select name="settings.imgGalleryFalRowSm" items="2,3,4,6,12" default="3"/>
+                <flux:field.select name="settings.imgGalleryFalRowXs" items="2,3,4,6,12" default="2"/>
             </flux:form.sheet>
         </flux:form>
     </f:section>
@@ -33,7 +34,7 @@
             <v:condition.type.isArray value="{images}">
                 <f:then>
                     <f:for each="{images}" as="image" iteration="iteration">
-                        <v:media.image src="{image.url}" alt="{image.alternative}" width="120c" height="120c" />
+                        <v:media.image src="{image.url}" alt="{image.alternative}" width="120c" height="120c"/>
                     </f:for>
                 </f:then>
                 <f:else>
@@ -57,7 +58,7 @@
         </v:asset.style>
 
         <div class="row">
-            <v:variable.set name="galleryid" value="{v:system.uniqId()}" />
+            <v:variable.set name="galleryid" value="{v:system.uniqId()}"/>
             <v:content.resources.fal field="settings.imgGalleryFalImageItems" as="images">
                 <f:for each="{images}" as="image" iteration="iteration">
                     <div class='col-xs-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowXs)} col-sm-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowSm)}  col-md-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowMd)}  col-lg-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowLg)} '>
@@ -74,7 +75,7 @@
                         <f:image src="{image.url}" width="{settings.imgGalleryFalImageWidth}c"
                                  height="{settings.imgGalleryFalImageWidth}c"
                                  alt="{image.alternative}"
-                                 title="{image.title}" class="img-responsive" />
+                                 title="{image.title}" class="img-responsive"/>
                         <f:if condition="{settings.imgGalleryFalShowPreviewTitle}">
                             <div class='text-right' style="min-height:20px;">
                                 <small class='text-muted'>
@@ -94,7 +95,8 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal"
-                                                aria-hidden="true">&times;</button>
+                                                aria-hidden="true">&times;
+                                        </button>
                                         <h4 class="modal-title text-center">
                                             {f:if(then: '{image.title}', else: '{image.name}', condition:image.title)}
                                         </h4>
@@ -102,7 +104,7 @@
                                     <div class="modal-body">
                                         <f:image src="{image.url}" width="858"
                                                  alt="{image.alternative}"
-                                                 title="{image.title}" class="img-responsive" />
+                                                 title="{image.title}" class="img-responsive"/>
                                         <f:if condition="{0:settings.imgGalleryFalPrevNextPosition} == {0:'picture'}">
                                             <a class="left carousel-control" data-dismiss="modal"
                                                data-toggle="modal"

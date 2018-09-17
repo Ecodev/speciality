@@ -3,18 +3,19 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Content" />
+    <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="thumbnailbox"
-                   options="{group: 'Bootstrap', Fluidcontent: {sorting: 150}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/ThumbnailBox.png\')}'}">
+        <flux:form id="thumbnailbox">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/ThumbnailBox.png')}"/>
             <flux:form.sheet name="thumbnailboxsheet">
-                <flux:field.input name="settings.thumbHeadline" />
-                <flux:field.text name="settings.thumbText" enableRichText="true" />
-                <flux:field.text name="settings.thumbLightbox" enableRichText="true" />
+                <flux:field.input name="settings.thumbHeadline"/>
+                <flux:field.text name="settings.thumbText" enableRichText="true"/>
+                <flux:field.text name="settings.thumbLightbox" enableRichText="true"/>
                 <flux:field.inline.fal name="settings.thumbImages"
                                        maxItems="10"
-                                       allowedExtensions="gif,jpg,jpeg,png" collapseAll="true" />
+                                       allowedExtensions="gif,jpg,jpeg,png" collapseAll="true"/>
             </flux:form.sheet>
         </flux:form>
     </f:section>
@@ -23,7 +24,7 @@
         <div class="thumbnail">
             <v:content.resources.fal field="settings.thumbImages" as="ImageItems">
                 <f:for each="{ImageItems}" as="ImageItem" iteration="ImageCount">
-                    <v:media.image src="{ImageItem.id}" alt="image" width="100px" />
+                    <v:media.image src="{ImageItem.id}" alt="image" width="100px"/>
                 </f:for>
             </v:content.resources.fal>
             <div class="caption">
@@ -34,12 +35,12 @@
     </f:section>
 
     <f:section name="Main">
-        <v:variable.set name="thumbID" value="{v:system.uniqId(prefix: 'thumb-')}" />
+        <v:variable.set name="thumbID" value="{v:system.uniqId(prefix: 'thumb-')}"/>
         <div class="thumbnail">
             <v:content.resources.fal field="settings.thumbImages" as="ImageItems">
                 <f:for each="{ImageItems}" as="ImageItem" iteration="ImageCount">
                     <f:if condition="{ImageCount.isFirst}=='TRUE'">
-                        <f:render section="ItemThumb" arguments="{_all}" />
+                        <f:render section="ItemThumb" arguments="{_all}"/>
                     </f:if>
                 </f:for>
             </v:content.resources.fal>
@@ -66,7 +67,7 @@
                             <f:for each="{ImageItems}" as="ImageItem" iteration="ImageCount">
                                 <f:if condition="{ImageCount.isFirst}=='TRUE'">
                                     <f:else>
-                                        <f:render section="ItemAll" arguments="{_all}" />
+                                        <f:render section="ItemAll" arguments="{_all}"/>
                                     </f:else>
                                 </f:if>
                             </f:for>
@@ -84,11 +85,11 @@
     <f:section name="ItemThumb">
         <f:image treatIdAsReference="TRUE" src="{ImageItem.id}" alt="{ImageItem.title}"
                  title="{f:if(condition: ImageItem.description, then: '{ImageItem.title}: ', else: '{ImageItem.title}')}{ImageItem.description}"
-                 width="500" />
+                 width="500"/>
     </f:section>
     <f:section name="ItemAll">
         <f:image treatIdAsReference="TRUE" src="{ImageItem.id}" alt="{ImageItem.title}"
                  title="{f:if(condition: ImageItem.description, then: '{ImageItem.title}: ', else: '{ImageItem.title}')}{ImageItem.description}"
-                 width="858" />
+                 width="858"/>
     </f:section>
 </div>

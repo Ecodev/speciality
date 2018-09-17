@@ -3,10 +3,12 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Content" />
+    <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="navigationlist" options="{group: 'Navigation', Fluidcontent: {sorting: 50}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/NavigationList.png\')}'}">
+        <flux:form id="navigationlist">
+            <flux:form.option.group value="Navigation"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/NavigationList.png')}"/>
             <flux:form.sheet name="display">
                 <flux:field.checkbox name="addWell"/>
                 <flux:field.checkbox name="zeroPadding"/>
@@ -82,9 +84,11 @@
                                 <v:variable.set name="linkTargetObject"
                                                 value="{v:iterator.explode(content: '{object.target}', glue: ' ')}"/>
                                 <li class="{f:if(condition: '{contentObject.pid} == {linkTargetObject.0}', then: 'active', else: 'item')}">
-                                    <f:link.page pageUid="{linkTargetObject.0}" class="{object.class}" target="{f:if(condition:'{linkTargetObject.1}', then: '{linkTargetObject.1}', else: '')}"
-                                             rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
-                                             title="{object.tooltip}">
+                                    <f:link.page pageUid="{linkTargetObject.0}"
+                                                 class="{object.class}"
+                                                 target="{f:if(condition:'{linkTargetObject.1}', then: '{linkTargetObject.1}', else: '')}"
+                                                 rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
+                                                 title="{object.tooltip}">
                                         <f:format.raw>{icon}{object.text}</f:format.raw>
                                     </f:link.page>
                                 </li>

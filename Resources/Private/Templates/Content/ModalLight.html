@@ -3,36 +3,43 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Content" />
+    <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="modalLight" options="{group: 'Bootstrap', Fluidcontent: {sorting: 550}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/ModalLight.png\')}'}">
+        <flux:form id="modalLight">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/ModalLight.png')}"/>
             <flux:form.sheet name="openbutton">
-                <flux:field.input name="settings.buttonText" />
-                <flux:field.input name="settings.title" />
+                <flux:field.input name="settings.buttonText"/>
+                <flux:field.input name="settings.title"/>
             </flux:form.sheet>
             <flux:form.sheet name="advanced">
-                <flux:field.input name="settings.additionalClassesButton" />
-                <flux:field.input name="settings.additionalClassesModal" />
+                <flux:field.input name="settings.additionalClassesButton"/>
+                <flux:field.input name="settings.additionalClassesModal"/>
             </flux:form.sheet>
 
-            <flux:form.content name="content" />
+            <flux:form.content name="content"/>
 
         </flux:form>
     </f:section>
 
     <f:section name="Preview">
-        <b>Bootstrap3: Modal Light</b><br />
-        Modal Content:title: {settings.title} / buttonText: {settings.buttonText}<br />
+        <b>Bootstrap3: Modal Light</b><br/>
+        Modal Content:title: {settings.title} / buttonText: {settings.buttonText}<br/>
         Modal Header: render Header: {settings.renderHeader} / Title: {settings.title}
     </f:section>
 
     <f:section name="Main">
-        <v:variable.set name="id" value="modal-{record.uid}" />
+        <v:variable.set name="id" value="modal-{record.uid}"/>
         <button class="btn {settings.additionalClassesButton}" data-toggle="modal" data-target="#{id}">
             {settings.buttonText}
         </button>
-        <div class="modal fade {additionalClassesModal}" id="{id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{id}" aria-hidden="true">
+        <div class="modal fade {additionalClassesModal}"
+             id="{id}"
+             tabindex="-1"
+             role="dialog"
+             aria-labelledby="myModalLabel-{id}"
+             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -42,7 +49,7 @@
                         </f:if>
                     </div>
                     <div class="modal-body">
-                        <flux:content.render area="content" />
+                        <flux:content.render area="content"/>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,9 @@
     <f:layout name="Content" />
 
     <f:section name="Configuration">
-        <flux:form id="TextImage" options="{group: 'Bootstrap',Fluidcontent: {sorting: 50}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/SimpleResponsiveImage.png\')}'}">
+        <flux:form id="TextImage">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/SimpleResponsiveImage.png')}"/>
             <flux:field.file name="settings.image" showThumbnails="1" allowed="jpg,jpeg,png,gif,JPEG,GIF,PNG,JPG" required="1" maxItems="1"/>
             <flux:field.input name="settings.imageTitle"/>
             <flux:field.input name="settings.maxWidth" default="400" />

@@ -3,15 +3,17 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Content" />
+    <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="accordion" options="{group: 'Bootstrap', Fluidcontent: {sorting: 300}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/Accordion.png\')}'}">
+        <flux:form id="accordion">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/Accordion.png')}"/>
             <flux:form.sheet name="panels">
                 <flux:form.section name="panels">
                     <flux:form.object name="panel">
-                        <flux:field.input name="title" />
-                        <flux:field.checkbox name="active" />
+                        <flux:field.input name="title"/>
+                        <flux:field.checkbox name="active"/>
                     </flux:form.object>
                 </flux:form.section>
             </flux:form.sheet>
@@ -19,9 +21,11 @@
                 <v:condition.type.isArray value="{panels}">
                     <f:for each="{panels}" as="panel" iteration="iteration">
                         <flux:grid.row>
-                            <flux:grid.column name="content.{panel.panel.id}" label="{panel.panel.title}" />
+                            <flux:grid.column colPos="0"
+                                              name="content.{panel.panel.id}"
+                                              label="content.{panel.panel.id}"/>
                         </flux:grid.row>
-                     </f:for>
+                    </f:for>
                 </v:condition.type.isArray>
             </flux:grid>
         </flux:form>
@@ -34,10 +38,10 @@
             window.location.hash=activepanel;
             })
         </v:asset.script>
-        <v:variable.set name="activeTabIndex" value="-1" />
+        <v:variable.set name="activeTabIndex" value="-1"/>
         <f:for each="{panels}" as="panel" iteration="iteration">
             <f:if condition="{panel.panel.active}">
-                <v:variable.set name="activeTabIndex" value="{iteration.index}" />
+                <v:variable.set name="activeTabIndex" value="{iteration.index}"/>
             </f:if>
         </f:for>
 
@@ -52,9 +56,10 @@
                             </a>
                         </h4>
                     </div>
-                    <div id="panel-{record.uid}-{iteration.index}" class="panel-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
+                    <div id="panel-{record.uid}-{iteration.index}"
+                         class="panel-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
                         <div class="panel-body">
-                            <flux:content.render area="content.{panel.panel.id}" />
+                            <flux:content.render area="content.{panel.panel.id}"/>
                         </div>
                     </div>
                 </div>

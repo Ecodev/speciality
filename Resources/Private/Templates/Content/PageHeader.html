@@ -3,12 +3,14 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Content" />
+    <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="pageheader" options="{group: 'Bootstrap', Fluidcontent: {sorting: 350}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/PageHeader.png\')}'}">
-            <flux:field.input name="header" />
-            <flux:field.input name="subheader" />
+        <flux:form id="pageheader">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/PageHeader.png')}"/>
+            <flux:field.input name="header"/>
+            <flux:field.input name="subheader"/>
         </flux:form>
     </f:section>
 

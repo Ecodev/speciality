@@ -3,18 +3,20 @@
      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Content" />
+    <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="well" options="{group: 'Bootstrap', Fluidcontent: {sorting: 450}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/Well.png\')}'}">
-            <flux:form.content name="content" />
-            <flux:field.select name="wellStyle" items="small, normal, large" default="normal" />
+        <flux:form id="well">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/Well.png')}"/>
+            <flux:form.content name="content"/>
+            <flux:field.select name="wellStyle" items="small, normal, large" default="normal"/>
         </flux:form>
     </f:section>
 
     <f:section name="Main">
         <div class="well{f:if(condition: '{0: wellStyle} != {0: \'normal\'}', then: ' well-{wellStyle}')}">
-            <flux:content.render area="content" />
+            <flux:content.render area="content"/>
         </div>
     </f:section>
 </div>

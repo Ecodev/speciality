@@ -6,8 +6,9 @@
     <f:layout name="Content"/>
 
     <f:section name="Configuration">
-        <flux:form id="TextToggle"
-                   options="{group: 'Bootstrap',Fluidcontent: {sorting: 50}, icon: '{f:uri.resource(path: \'Backend/Icons/Content/Text.png\')}'}">
+        <flux:form id="TextToggle">
+            <flux:form.option.group value="Bootstrap"/>
+            <flux:form.option.icon value="/{f:uri.resource(extensionName: 'speciality', path: 'Backend/Icons/Content/Text.png')}"/>
             <flux:field.text name="settings.mainText"
                              enableRichText="true"
                              defaultExtras="richtext[copy]:rte_transform[mode=ts_css]"/>
