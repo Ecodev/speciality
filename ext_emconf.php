@@ -15,6 +15,7 @@ $EM_CONF[$_EXTKEY] = [
             'fluidpages' => '0.0.0-0.0.0',
             'fluid_styled_content' => '0.0.0-0.0.0',
             'vhs' => '0.0.0-0.0.0',
+            'rte_ckeditor_image' => '0.0.0-0.0.0',
         ],
         'conflicts' => [
         ],
