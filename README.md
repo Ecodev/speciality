@@ -1,3 +1,5 @@
+**Beware: this PHP package was integrated into https://github.com/Ecodev/typo3-cms-speciality-distribution and is therefore abandoned as a standalone package**.
+
 Speciality
 ==========
 
