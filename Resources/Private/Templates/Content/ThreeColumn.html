@@ -98,7 +98,8 @@
         </flux:grid>
     </f:section>
 
-    <f:section name="FrontendColRenderingGrid3"><div class="row {settings.grid3.rowCSS} {f:if(condition: ' {0: settings.grid3.wrapclass}== {0 : \'none\'}', else: '{settings.grid4.wrapclass}')} ">
+    <f:section name="FrontendColRenderingGrid3">
+        <div class="row {settings.grid3.rowCSS} {f:if(condition: ' {0: settings.grid3.wrapclass}== {0 : \'none\'}', else: '{settings.grid4.wrapclass}')} ">
         <f:if condition="{settings.grid3.split}=='more'">
             <f:then>
                 <f:render section="FEMoreGrid3" arguments="{_all}"/>
@@ -108,8 +109,8 @@
                           arguments="{_all}"/>
             </f:else>
         </f:if>
+        </div>
     </f:section>
-</div>
 
 <f:comment>Frontend Switchcase Sections</f:comment>
 <f:section name="FEMoreGrid3">
