@@ -4,38 +4,14 @@
 
 config {
 
-    # How to handle localization, possible values:
-    # content_fallback: the system will always operate with the selected language even if the page is not translated with a page overlay record.
-    # strict: the system will report an error if the requested translation does not exist
-    # ignore: the system will stay with the selected language even if the page is not translated
-    # @todo fix me! it looks the setting is not taken into account with latest version of fedext
-    # sys_language_mode = content_fallback
-
-    # Records that are not localized till be hidden
-    # Possible value hideNonTranslated | int (the sys_language)
-    # @todo fix me! it looks the setting is not taken into account with latest version of fedext
-    #sys_language_overlay = hideNonTranslated
-
     # If set, the stdWrap property “prefixComment” will be disabled, thus preventing any revealing and space-consuming comments in the HTML source code.
     disablePrefixComment = 1
 
     # If set, the inline styles TYPO3 controls in the core are written to a file
     inlineStyle2TempFile = 1
 
-    # Charset, should always be utf-8
-    renderCharset = utf-8
-
-    #
-    metaCharset = utf-8
-
     # Setting up the language variable "L" to be passed along with links
     linkVars = L(int), print
-
-    # html5? Yeah!
-    doctype = html5
-
-    # XML? Not that!
-    xmlprologue = none
 
     #
     prefixLocalAnchors = all
@@ -68,9 +44,6 @@ config {
     #
     spamProtectEmailAddresses_lastDotSubst = (dot)
 
-    # Enable RealURL
-    tx_realurl_enable = 1
-
     #
     sendCacheHeaders = 1
 
@@ -80,10 +53,13 @@ config {
     #
     pageTitleFirst = 0
 
-
     # If this value is set, then all relative links in TypoScript are prepended with this string.
     # Used to convert relative paths to absolute paths.
     absRefPrefix = /
+
+    # Set attribute in <html> tag
+    #htmlTag_setParams = lang="en" dir="ltr" class="no-js"
+    htmlTag_setParams =
 
     #
     #headerComment = Integration and development - http://example.com/
@@ -93,4 +69,10 @@ config {
     # by EXT:seo_basics if enabled and its static TS file loaded.
     pageTitleSeparator = -
     pageTitleSeparator.noTrimWrap = | | |
+
+    # Will take effect if EXT:min is activated
+    compressCss = 1
+    concatenateCss = 1
+    compressJs = 1
+    concatenateJs = 1
 }
